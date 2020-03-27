@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--配置数据源-->
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/friday2"
+                        userId="root"
+                        password="1234">
+        </jdbcConnection>
+        <!--指定JavaBean的生成位置-->
+        <javaModelGenerator targetPackage="com.gdpu.myfriday2.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--指定mapper映射文件的生成位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--指定mapper接口的生成位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.gdpu.myfriday2.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--指定表的生成策略-->
+        <table tableName="user" domainObjectName="User"/>
+        <table tableName="role" domainObjectName="Role"/>
+        <table tableName="role_user" domainObjectName="RoleUser"/>
+        <table tableName="permission" domainObjectName="Permission"/>
+        <table tableName="role_permission" domainObjectName="RolePermission"/>
+    </context>
+</generatorConfiguration>
