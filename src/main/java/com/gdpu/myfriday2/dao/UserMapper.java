@@ -2,7 +2,9 @@ package com.gdpu.myfriday2.dao;
 
 import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.model.UserExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -95,4 +97,20 @@ public interface UserMapper {
      * @mbg.generated Fri Mar 27 16:45:25 CST 2020
      */
     int updateByPrimaryKey(User record);
+
+    /**
+     * 根据条件查询携带角色信息的用户列表
+     *
+     * @param example 条件
+     * @return 用户列表
+     */
+    List<User> selectWithRoleByExample(UserExample example);
+
+    /**
+     * 根据用户ID查询携带角色信息的指定用户
+     *
+     * @param userId 用户ID
+     * @return 用户
+     */
+    User selectWithRoleByPrimaryKey(Long userId);
 }
