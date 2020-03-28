@@ -41,9 +41,11 @@
                     <button class="layui-btn layui-btn-danger" id="delAllBtn">
                         <i class="layui-icon"></i>批量删除
                     </button>
+                    <button class="layui-btn layui-btn-warm"><i class="layui-icon layui-icon-close-fill"></i>禁用</button>
                     <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',600,500)">
                         <i class="layui-icon"></i>添加
                     </button>
+
                 </div>
                 <!--搜索框-->
                 <div class="layui-card-body layui-inline">
@@ -64,11 +66,6 @@
                         <script type="text/html" id="barDemo">
                             <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
                             <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
-
-                            <!-- 这里同样支持 laytpl 语法，如： -->
-                            {{#  if(d.auth > 2){ }}
-                            <a class="layui-btn layui-btn-xs" lay-event="check">审核</a>
-                            {{#  } }}
                         </script>
                     </table>
                 </div>
@@ -105,7 +102,6 @@
                 , dataName: 'data' //规定数据列表的字段名称，默认：data
             }
             , page: true //开启分页
-            , totalRow: true
             , cols: [
                 [ //表头
                     {checkbox: true, fixed: 'left'}
