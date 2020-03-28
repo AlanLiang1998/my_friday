@@ -5,6 +5,7 @@ import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.service.UserService;
 import com.gdpu.myfriday2.utils.ResponseResult;
 import com.github.pagehelper.PageInfo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,7 @@ import java.util.List;
  * Date 2020/3/27 18:18
  * Version 1.0
  **/
+@Slf4j
 @Controller
 @RequestMapping("/user")
 public class UserController {

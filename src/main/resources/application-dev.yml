@@ -1,0 +1,9 @@
+logging:
+  level:
+    root: info
+    com.gdpu.myfriday2: debug
+  file:
+    path: log/blog-dev.log
+
+server:
+  port: 8080

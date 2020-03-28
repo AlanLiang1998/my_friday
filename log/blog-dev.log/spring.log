@@ -1679,3 +1679,121 @@ Caused by: java.lang.IllegalArgumentException: Result Maps collection already co
 2020-03-28 14:07:12.461  INFO 13748 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2020-03-28 14:10:00.657  INFO 13748 --- [Thread-89] com.alibaba.druid.pool.DruidDataSource   : {dataSource-16} closed
 2020-03-28 14:10:00.658  INFO 13748 --- [Thread-89] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-28 15:23:26.348  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 13748 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-28 15:23:26.348  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-28 15:23:26.593  INFO 13748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-28 15:23:26.593  INFO 13748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-28 15:23:26.593  INFO 13748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-28 15:23:26.606  INFO 13748 --- [restartedMain] o.a.c.c.C.[Tomcat-24].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2020-03-28 15:23:26.606  INFO 13748 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 253 ms
+2020-03-28 15:23:26.631  INFO 13748 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-28 15:23:26.666  INFO 13748 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-37} inited
+2020-03-28 15:23:26.739  INFO 13748 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-28 15:23:26.749  INFO 13748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-28 15:23:26.793  INFO 13748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-28 15:23:26.814  INFO 13748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-28 15:23:26.815  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.513 seconds (JVM running for 9337.895)
+2020-03-28 15:23:26.816  INFO 13748 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-28 15:24:45.290  INFO 13748 --- [Thread-200] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-28 15:24:45.292  INFO 13748 --- [Thread-200] com.alibaba.druid.pool.DruidDataSource   : {dataSource-37} closed
+2020-03-28 15:24:45.669  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 13748 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-28 15:24:45.670 DEBUG 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-28 15:24:45.670  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-28 15:24:45.798  WARN 13748 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gdpu.myfriday2.dao]' package. Please check your configuration.
+2020-03-28 15:24:45.917  INFO 13748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-28 15:24:45.918  INFO 13748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-28 15:24:45.919  INFO 13748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-28 15:24:45.936  INFO 13748 --- [restartedMain] o.a.c.c.C.[Tomcat-24].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2020-03-28 15:24:45.936  INFO 13748 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 265 ms
+2020-03-28 15:24:45.948  WARN 13748 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\idea\myfriday2\target\classes\com\gdpu\myfriday2\service\impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.gdpu.myfriday2.service.impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6229661f]
+2020-03-28 15:24:45.948  INFO 13748 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-28 15:24:45.955  INFO 13748 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-28 15:24:45.956 ERROR 13748 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServiceImpl' defined in file [D:\idea\myfriday2\target\classes\com\gdpu\myfriday2\service\impl\UserServiceImpl.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.gdpu.myfriday2.service.impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6229661f]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.gdpu.myfriday2.Myfriday2Application.main(Myfriday2Application.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.gdpu.myfriday2.service.impl.UserServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6229661f]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:734)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:666)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:382)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:363)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:311)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1094)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	... 20 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Lcom/gdpu/myfriday2/dao/UserMapper;
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Class.java:2583)
+	at java.lang.Class.getDeclaredFields(Class.java:1916)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:729)
+	... 26 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.gdpu.myfriday2.dao.UserMapper
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 30 common frames omitted
+
+2020-03-28 15:24:48.886  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 13748 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-28 15:24:48.886 DEBUG 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-28 15:24:48.886  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-28 15:24:49.470  INFO 13748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-28 15:24:49.471  INFO 13748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-28 15:24:49.471  INFO 13748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-28 15:24:49.483  INFO 13748 --- [restartedMain] o.a.c.c.C.[Tomcat-25].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2020-03-28 15:24:49.483  INFO 13748 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 594 ms
+2020-03-28 15:24:49.514  INFO 13748 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-28 15:24:49.558  INFO 13748 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-38} inited
+2020-03-28 15:24:49.704  INFO 13748 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-28 15:24:49.719  INFO 13748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-28 15:24:49.792  INFO 13748 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-28 15:24:49.815  INFO 13748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-28 15:24:49.815  INFO 13748 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.982 seconds (JVM running for 9420.895)
+2020-03-28 15:24:49.816  INFO 13748 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-28 15:24:51.942  INFO 13748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-25].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-28 15:24:51.945  INFO 13748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-28 15:24:51.948  INFO 13748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-03-28 15:24:52.407  INFO 13748 --- [http-nio-8080-exec-6] c.g.myfriday2.controller.UserController  : 哈哈
+2020-03-28 15:24:52.409 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-28 15:24:52.410 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-28 15:24:52.417 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-28 15:24:52.418 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id LIMIT ? 
+2020-03-28 15:24:52.418 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-28 15:24:52.425 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-28 15:24:52.426 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-28 15:24:52.426 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-28 15:24:52.427 DEBUG 13748 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-28 15:24:52.467  INFO 13748 --- [http-nio-8080-exec-9] c.g.myfriday2.controller.UserController  : 哈哈
+2020-03-28 15:24:52.469 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-28 15:24:52.470 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-28 15:24:52.472 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-28 15:24:52.473 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id LIMIT ? 
+2020-03-28 15:24:52.473 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-28 15:24:52.482 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-28 15:24:52.484 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-28 15:24:52.484 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-28 15:24:52.485 DEBUG 13748 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
