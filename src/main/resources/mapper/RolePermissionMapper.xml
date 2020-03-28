@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.gdpu.myfriday2.dao.RoleUserMapper">
-  <resultMap id="BaseResultMap" type="com.gdpu.myfriday2.model.RoleUserKey">
+<mapper namespace="com.gdpu.myfriday2.dao.RolePermissionMapper">
+  <resultMap id="BaseResultMap" type="com.gdpu.myfriday2.model.RolePermissionKey">
     <id column="role_id" jdbcType="BIGINT" property="roleId" />
-    <id column="user_id" jdbcType="BIGINT" property="userId" />
+    <id column="permission_id" jdbcType="BIGINT" property="permissionId" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,15 +64,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    role_id, user_id
+    role_id, permission_id
   </sql>
-  <select id="selectByExample" parameterType="com.gdpu.myfriday2.model.RoleUserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.gdpu.myfriday2.model.RolePermissionExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from role_user
+    from role_permission
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -80,54 +80,54 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.gdpu.myfriday2.model.RoleUserKey">
-    delete from role_user
+  <delete id="deleteByPrimaryKey" parameterType="com.gdpu.myfriday2.model.RolePermissionKey">
+    delete from role_permission
     where role_id = #{roleId,jdbcType=BIGINT}
-      and user_id = #{userId,jdbcType=BIGINT}
+      and permission_id = #{permissionId,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.gdpu.myfriday2.model.RoleUserExample">
-    delete from role_user
+  <delete id="deleteByExample" parameterType="com.gdpu.myfriday2.model.RolePermissionExample">
+    delete from role_permission
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.gdpu.myfriday2.model.RoleUserKey">
-    insert into role_user (role_id, user_id)
-    values (#{roleId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT})
+  <insert id="insert" parameterType="com.gdpu.myfriday2.model.RolePermissionKey">
+    insert into role_permission (role_id, permission_id)
+    values (#{roleId,jdbcType=BIGINT}, #{permissionId,jdbcType=BIGINT})
   </insert>
-  <insert id="insertSelective" parameterType="com.gdpu.myfriday2.model.RoleUserKey">
-    insert into role_user
+  <insert id="insertSelective" parameterType="com.gdpu.myfriday2.model.RolePermissionKey">
+    insert into role_permission
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="roleId != null">
         role_id,
       </if>
-      <if test="userId != null">
-        user_id,
+      <if test="permissionId != null">
+        permission_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="roleId != null">
         #{roleId,jdbcType=BIGINT},
       </if>
-      <if test="userId != null">
-        #{userId,jdbcType=BIGINT},
+      <if test="permissionId != null">
+        #{permissionId,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.gdpu.myfriday2.model.RoleUserExample" resultType="java.lang.Long">
-    select count(*) from role_user
+  <select id="countByExample" parameterType="com.gdpu.myfriday2.model.RolePermissionExample" resultType="java.lang.Long">
+    select count(*) from role_permission
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update role_user
+    update role_permission
     <set>
       <if test="record.roleId != null">
         role_id = #{record.roleId,jdbcType=BIGINT},
       </if>
-      <if test="record.userId != null">
-        user_id = #{record.userId,jdbcType=BIGINT},
+      <if test="record.permissionId != null">
+        permission_id = #{record.permissionId,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null">
@@ -135,9 +135,9 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update role_user
+    update role_permission
     set role_id = #{record.roleId,jdbcType=BIGINT},
-      user_id = #{record.userId,jdbcType=BIGINT}
+      permission_id = #{record.permissionId,jdbcType=BIGINT}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
