@@ -4,7 +4,9 @@ import com.gdpu.myfriday2.model.Permission;
 import com.gdpu.myfriday2.model.PermissionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface PermissionMapper {
     long countByExample(PermissionExample example);
 

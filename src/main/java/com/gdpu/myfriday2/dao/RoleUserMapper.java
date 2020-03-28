@@ -4,7 +4,9 @@ import com.gdpu.myfriday2.model.RoleUserExample;
 import com.gdpu.myfriday2.model.RoleUserKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface RoleUserMapper {
     long countByExample(RoleUserExample example);
 

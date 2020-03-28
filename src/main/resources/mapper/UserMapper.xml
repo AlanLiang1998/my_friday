@@ -109,7 +109,7 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
-    <insert id="insert" parameterType="com.gdpu.myfriday2.model.User">
+    <insert id="insert" parameterType="com.gdpu.myfriday2.model.User" useGeneratedKeys="true" keyProperty="userId">
     insert into user (user_id, username, password, 
       nickname, avatar, email, 
       phone, sex, birthday, 
@@ -121,7 +121,7 @@
       #{status,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.gdpu.myfriday2.model.User">
+    <insert id="insertSelective" parameterType="com.gdpu.myfriday2.model.User" useGeneratedKeys="true" keyProperty="userId">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="userId != null">

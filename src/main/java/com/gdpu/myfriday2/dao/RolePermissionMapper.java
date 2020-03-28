@@ -4,7 +4,9 @@ import com.gdpu.myfriday2.model.RolePermissionExample;
 import com.gdpu.myfriday2.model.RolePermissionKey;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface RolePermissionMapper {
     long countByExample(RolePermissionExample example);
 

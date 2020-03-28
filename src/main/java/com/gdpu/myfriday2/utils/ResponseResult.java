@@ -2,6 +2,8 @@ package com.gdpu.myfriday2.utils;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @Descriptin TODO
  * @Author AlanLiang
@@ -9,7 +11,7 @@ import lombok.Data;
  * Version 1.0
  **/
 @Data
-public class ResponseResult<T> {
+public class ResponseResult<T> implements Serializable {
     private Integer code;
 
     private String msg;
@@ -18,20 +20,26 @@ public class ResponseResult<T> {
 
     private T data;
 
-    public ResponseResult(T data, Long count) {
-        this.setData(data);
-        this.setCount(count);
+    public static <T> ResponseResult<T> tableSuccess(T data, Long count) {
+        ResponseResult<T> result = new ResponseResult<>();
+        result.setCode(200);
+        result.setMsg("请求成功");
+        result.setData(data);
+        result.setCount(count);
+        return result;
     }
 
-    public ResponseResult success() {
-        this.setCode(200);
-        this.setMsg("请求成功");
-        return this;
+    public static <T> ResponseResult<T> success() {
+        ResponseResult<T> result = new ResponseResult<>();
+        result.setCode(200);
+        result.setMsg("请求成功");
+        return result;
     }
 
-    public ResponseResult failure() {
-        this.setCode(400);
-        this.setMsg("请求失败");
-        return this;
+    public static <T> ResponseResult<T> failure() {
+        ResponseResult<T> result = new ResponseResult<>();
+        result.setCode(400);
+        result.setMsg("请求失败");
+        return result;
     }
 }
