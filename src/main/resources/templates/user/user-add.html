@@ -34,9 +34,6 @@
                     <input type="text" id="username" name="username" required="" lay-verify="username"
                            autocomplete="off" class="layui-input">
                 </div>
-                <div class="layui-form-mid layui-word-aux">
-                    <span class="x-red">*</span>将会成为您唯一的登入名
-                </div>
             </div>
             <div class="layui-form-item">
                 <label for="nickname" class="layui-form-label">昵称</label>
@@ -88,9 +85,14 @@
                     <input type="checkbox" name="status" lay-skin="switch" lay-text="激活|禁用" value="1" checked/>
                 </div>
             </div>
+
             <div class="layui-form-item">
-                <label class="layui-form-label"></label>
-                <button class="layui-btn" lay-filter="add" lay-submit="">增加</button>
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="add" style="background-color: #5FB878">
+                        立即提交
+                    </button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
             </div>
         </form>
     </div>

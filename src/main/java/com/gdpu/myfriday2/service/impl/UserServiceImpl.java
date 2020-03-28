@@ -2,6 +2,7 @@ package com.gdpu.myfriday2.service.impl;
 
 import com.gdpu.myfriday2.dao.RoleUserMapper;
 import com.gdpu.myfriday2.dao.UserMapper;
+import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.PageDto;
 import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.exception.EntityExistException;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -98,5 +100,43 @@ public class UserServiceImpl implements UserService {
         }
 
         return 1;
+    }
+
+    /**
+     * 根据关键词查询用户
+     */
+    @Override
+    public List<User> queryAllByKeyword(KeywordDto keywordDto) {
+        PageHelper.startPage(keywordDto.getPage(), keywordDto.getLimit());
+        String pattern = "[0-9]+";
+        if (!"".equals(keywordDto.getKeyword()) && keywordDto.getKeyword().matches(pattern)) {
+            //根据用户ID查询
+            long userId = Long.parseLong(keywordDto.getKeyword());
+            ArrayList<User> users = new ArrayList<>();
+            users.add(userMapper.selectWithRoleByPrimaryKey(userId));
+            return users;
+        } else {
+            //根据用户名查询
+            UserExample userExample = new UserExample();
+            userExample.createCriteria().andUsernameLike("%" + keywordDto.getKeyword() + "%");
+            return userMapper.selectWithRoleByExample(userExample);
+        }
+    }
+
+    @Override
+    public long countAllByKeyword(KeywordDto keywordDto) {
+        String pattern = "[0-9]+";
+        if (!"".equals(keywordDto.getKeyword()) && keywordDto.getKeyword().matches(pattern)) {
+            //根据用户ID查询
+            UserExample userExample = new UserExample();
+            long userId = Long.parseLong(keywordDto.getKeyword());
+            userExample.createCriteria().andUserIdEqualTo(userId);
+            return userMapper.countByExample(userExample);
+        } else {
+            //根据用户名查询
+            UserExample userExample = new UserExample();
+            userExample.createCriteria().andUsernameLike("%" + keywordDto.getKeyword() + "%");
+            return userMapper.countByExample(userExample);
+        }
     }
 }

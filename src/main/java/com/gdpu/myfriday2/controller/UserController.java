@@ -1,5 +1,6 @@
 package com.gdpu.myfriday2.controller;
 
+import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.PageDto;
 import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.model.User;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.*;
 import java.util.Date;
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class UserController {
      */
     @ResponseBody
     @GetMapping("/list")
-    public ResponseResult getUsers(PageDto pageDto) {
+    public ResponseResult<Object> getUsers(PageDto pageDto) {
         List<User> users = userService.queryAllByPage(pageDto);
         Long count = userService.countAll();
         return ResponseResult.tableSuccess(users, count);
@@ -71,5 +73,19 @@ public class UserController {
         } else {
             return ResponseResult.failure();
         }
+    }
+
+    /**
+     * 根据关键词（用户ID或用户名）查询用户
+     *
+     * @param keywordDto 关键词DTO
+     * @return 用户列表
+     */
+    @ResponseBody
+    @GetMapping
+    public ResponseResult<Object> searchUsersByPage(KeywordDto keywordDto) {
+        List<User> users = userService.queryAllByKeyword(keywordDto);
+        long count = userService.countAllByKeyword(keywordDto);
+        return ResponseResult.tableSuccess(users, count);
     }
 }

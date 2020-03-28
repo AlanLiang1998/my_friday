@@ -42,8 +42,8 @@
                 <div class="layui-card-header layui-inline">
                     <button class="layui-btn layui-btn-danger" id="delAllBtn"><i class="layui-icon"></i>批量删除</button>
                     <button class="layui-btn layui-btn-warm"><i class="layui-icon layui-icon-close-fill"></i>禁用</button>
-                    <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',600,500)"><i
-                            class="layui-icon"></i>添加
+                    <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',460,500)">
+                        <i class="layui-icon"></i>添加
                     </button>
 
                 </div>
@@ -55,7 +55,7 @@
                                    class="layui-input">
                         </div>
                         <div class="layui-inline layui-show-xs-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="search-filter">
+                            <button class="layui-btn" lay-submit="" lay-filter="search">
                                 <i class="layui-icon">&#xe615;</i>
                             </button>
                         </div>
@@ -131,6 +131,51 @@
                     , {fixed: 'right', width: 140, align: 'center', toolbar: '#barDemo'}
                 ]
             ]
+        });
+
+        //监听提交
+        form.on('submit(search)', function (data) {
+            table.render({
+                elem: '#user-table'
+                , url: '/user?keyword=' + data.field.keyword //数据接口
+                , response: {
+                    statusName: 'code' //规定数据状态的字段名称，默认：code
+                    , statusCode: 200 //规定成功的状态码，默认：0
+                    , msgName: 'msg' //规定状态信息的字段名称，默认：msg
+                    , countName: 'count' //规定数据总数的字段名称，默认：count
+                    , dataName: 'data' //规定数据列表的字段名称，默认：data
+                }
+                , page: true //开启分页
+                , cols: [
+                    [ //表头
+                        {checkbox: true, fixed: 'left'}
+                        , {field: 'userId', title: 'ID', width: 30, sort: true}
+                        , {field: 'username', title: '用户名', width: 100, sort: true}
+                        , {
+                        field: 'role', title: '角色', width: 80, templet: function (data) {
+                            return data.role.roleName;
+                        }
+                    }
+                        , {
+                        field: 'sex', title: '性别', width: 70, sort: true, templet: function (data) {
+                            return data.sex === 'M' ? '男' : '女';
+                        }
+                    }
+                        , {field: 'phone', title: '电话', width: 120}
+                        , {field: 'email', title: '邮箱', width: 150}
+                        , {
+                        field: 'status', title: '状态', width: 60, templet: function (data) {
+                            return data.status === 1 ? '激活' : '停用';
+                        }
+                    }
+                        , {field: 'createTime', title: '创建日期', width: 150}
+                        , {field: 'updateTime', title: '最后更新', width: 150}
+                        , {fixed: 'right', width: 140, align: 'center', toolbar: '#barDemo'}
+                    ]
+                ]
+            });
+
+            return false;
         });
     });
 
