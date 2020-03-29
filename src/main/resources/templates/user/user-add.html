@@ -109,7 +109,7 @@
                 url: '/role/list',
                 type: 'GET',
                 success: function (result) {
-                    $.each(result, function () {
+                    $.each(result.data, function () {
                         let roleId = $(this)[0].roleId;
                         let roleName = $(this)[0].roleName;
                         let roleOption = $('<option></option>').val(roleId).text(roleName);

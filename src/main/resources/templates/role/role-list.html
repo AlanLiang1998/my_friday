@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="x-admin-sm" xmlns:th="http://www.thymeleaf.org">
+<!--/*-->
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.2</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi"/>
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/xadmin.css">
+    <script src="./lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/xadmin.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<!--*/-->
+<head th:replace="fragments :: head(~{::title})">
+    <title>friday-角色管理</title>
+</head>
+<body>
+<div class="x-nav">
+          <span class="layui-breadcrumb">
+            <a href="">首页</a>
+            <a href="">系统管理</a>
+            <a><cite>角色管理</cite></a>
+          </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+       onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <!--工具栏-->
+            <div class="layui-card">
+                <!--操作栏-->
+                <script type="text/html" id="toolbar">
+                    <button class="layui-btn layui-btn-danger layui-btn-disabled" id="delAllBtn">
+                        <i class="layui-icon"></i>批量删除
+                    </button>
+                    <button class="layui-btn" onclick="xadmin.open('添加角色','/role/addPage',460,500)">
+                        <i class="layui-icon"></i>添加
+                    </button>
+                    <!--搜索框-->
+                    <div class="layui-card-body layui-inline">
+                        <form class="layui-form layui-col-space5" id="search-form">
+                            <div class="layui-inline layui-show-xs-block">
+                                <input type="text" name="keyword" placeholder="请输入角色ID或角色名" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                            <div class="layui-inline layui-show-xs-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="role-search">
+                                    <i class="layui-icon">&#xe615;</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </script>
+
+                <div class="layui-card-body">
+                    <!--数据表格-->
+                    <table class="layui-table layui-form" id="role-table" lay-filter="role-table-filter">
+                        <!--列工具栏-->
+                        <script type="text/html" id="rowBar">
+                            <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        </script>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    layui.use(['laydate', 'form', 'table'], function () {
+        var laydate = layui.laydate;
+        var form = layui.form;
+        var table = layui.table;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#start' //指定元素
+        });
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#end' //指定元素
+        });
+
+        //渲染数据表格
+        table.render({
+            elem: '#role-table'
+            , url: '/role/list' //数据接口
+            , response: {
+                statusName: 'code' //规定数据状态的字段名称，默认：code
+                , statusCode: 200 //规定成功的状态码，默认：0
+                , msgName: 'msg' //规定状态信息的字段名称，默认：msg
+                , countName: 'count' //规定数据总数的字段名称，默认：count
+                , dataName: 'data' //规定数据列表的字段名称，默认：data
+            }
+            , toolbar: '#toolbar' //开启头部工具栏，并为其绑定左侧模板
+            , defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
+                title: '提示'
+                , layEvent: 'LAYTABLE_TIPS'
+                , icon: 'layui-icon-tips'
+            }]
+            , page: true //开启分页
+            , cols: [
+                [ //表头
+                    {checkbox: true, fixed: 'left'}
+                    , {field: 'roleId', title: 'ID', width: 30, sort: true}
+                    , {field: 'roleName', title: '角色名', width: 100, sort: true}
+                    , {field: 'description', title: '描述', width: 150, sort: true}
+                    , {field: 'createTime', title: '创建日期', width: 150}
+                    , {field: 'updateTime', title: '最后更新', width: 150}
+                    , {fixed: 'right', width: 140, align: 'center', toolbar: '#rowBar'}
+                ]
+            ]
+        });
+
+
+        //监听复选框
+        table.on('checkbox(role-table-filter)', function (obj) {
+            if (obj.checked) {
+                $('#delAllBtn').removeClass('layui-btn-disabled');
+            } else {
+                $('#delAllBtn').addClass('layui-btn-disabled');
+            }
+        });
+
+        //监听工具条
+        table.on('tool(role-table-filter)', function (obj) {
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+
+            if (layEvent === 'del') { //删除
+                let msg = '确认删除角色:' + data.roleName + ' 吗?';
+                layer.confirm(msg, {icon: 3, title: '提示'}, function (index) {
+                    $.ajax({
+                        url: '/role',
+                        data: {roleId: data.roleId},
+                        type: 'DELETE',
+                        success: function (result) {
+                            if (result.code == 200) {
+                                obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                layer.msg('删除成功', {icon: 1});
+                            } else {
+                                layer.msg("删除失败", {icon: 5});
+                            }
+                        },
+                        error: function (result) {
+                            let error = JSON.parse(result.responseText);
+                            layer.alert(error.message, {icon: 5});
+                        }
+                    });
+
+                });
+            } else if (layEvent === 'edit') { //编辑
+                xadmin.open('编辑角色', '/role/editPage?roleId=' + data.role, 460, 500);
+            }
+        });
+
+        //监听搜索提交
+        form.on('submit(role-search)', function (data) {
+            table.render({
+                elem: '#role-table'
+                , url: '/role?keyword=' + data.field.keyword //数据接口
+                , response: {
+                    statusName: 'code' //规定数据状态的字段名称，默认：code
+                    , statusCode: 200 //规定成功的状态码，默认：0
+                    , msgName: 'msg' //规定状态信息的字段名称，默认：msg
+                    , countName: 'count' //规定数据总数的字段名称，默认：count
+                    , dataName: 'data' //规定数据列表的字段名称，默认：data
+                }
+                , toolbar: '#toolbar' //开启头部工具栏，并为其绑定左侧模板
+                , defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
+                    title: '提示'
+                    , layEvent: 'LAYTABLE_TIPS'
+                    , icon: 'layui-icon-tips'
+                }]
+                , page: true //开启分页
+                , cols: [
+                    [ //表头
+                        {checkbox: true, fixed: 'left'}
+                        , {field: 'roleId', title: 'ID', width: 30, sort: true}
+                        , {field: 'roleName', title: '角色名', width: 100, sort: true}
+                        , {field: 'description', title: '描述', width: 150, sort: true}
+                        , {field: 'createTime', title: '创建日期', width: 150}
+                        , {field: 'updateTime', title: '最后更新', width: 150}
+                        , {fixed: 'right', width: 140, align: 'center', toolbar: '#rowBar'}
+                    ]
+                ]
+            });
+
+            return false;
+        });
+
+        //批量删除
+        $('#delAllBtn').click(function () {
+            var checkStatus = table.checkStatus('role-table');
+            var msg = '确认删除选中的' + checkStatus.data.length + '行吗？';
+            layer.confirm(msg, {icon: 3, title: '提示'}, function (index) {
+                var idList = [];
+                $.each(checkStatus.data, function () {
+                    idList.push($(this)[0].roleId);
+                });
+                $.ajax({
+                    url: '/role/list',
+                    type: 'DELETE',
+                    data: JSON.stringify(idList),
+                    contentType: 'application/json',
+                    success: function (result) {
+                        if (result.code == 200) {
+                            layer.msg('删除成功', {icon: 1});
+                            //xadmin.father_reload();
+                            table.reload('role-table');
+                        } else {
+                            layer.msg('删除失败', {icon: 5});
+                        }
+                    },
+                    error: function (result) {
+                        let error = JSON.parse(result.responseText);
+                        layer.alert(error.message, {icon: 5});
+                    }
+                });
+            });
+        });
+    });
+
+
+</script>
+<script>var _hmt = _hmt || [];
+(function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();</script>
+</html>

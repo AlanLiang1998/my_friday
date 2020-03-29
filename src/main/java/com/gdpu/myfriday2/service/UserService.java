@@ -14,8 +14,20 @@ public interface UserService {
 
     int create(UserDto userDto);
 
+    /**
+     * 根据关键词（用户ID或用户名）查询用户
+     *
+     * @param keyword 关键词DTO
+     * @return 用户列表
+     */
     List<User> queryAllByKeyword(KeywordDto keyword);
 
+    /**
+     * 据关键词（用户ID或用户名）查询用户数量
+     *
+     * @param keywordDto 关键词DTO
+     * @return 用户数量
+     */
     long countAllByKeyword(KeywordDto keywordDto);
 
     /**

@@ -100,7 +100,7 @@
                 type: 'GET',
                 success: function (result) {
                     let id = [[${user.role.roleId}]];
-                    $.each(result, function () {
+                    $.each(result.data, function () {
                         let roleId = $(this)[0].roleId;
                         let roleName = $(this)[0].roleName;
                         let roleOption = $('<option></option>').val(roleId).text(roleName);
