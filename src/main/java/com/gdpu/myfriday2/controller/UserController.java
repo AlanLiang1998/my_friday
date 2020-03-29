@@ -7,14 +7,14 @@ import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.service.UserService;
 import com.gdpu.myfriday2.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
@@ -64,15 +64,12 @@ public class UserController {
      */
     @ResponseBody
     @PostMapping
-    public ResponseResult<Object> create(@Validated UserDto userDto) {
+    public ResponseResult<Object> create(@Validated(User.Create.class) UserDto userDto) {
         userDto.setPassword("123456");
         userDto.setCreateTime(new Date());
         userDto.setUpdateTime(userDto.getCreateTime());
-        if (userService.create(userDto) == 1) {
-            return ResponseResult.success();
-        } else {
-            return ResponseResult.failure();
-        }
+        int result = userService.create(userDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 
     /**
@@ -87,5 +84,47 @@ public class UserController {
         List<User> users = userService.queryAllByKeyword(keywordDto);
         long count = userService.countAllByKeyword(keywordDto);
         return ResponseResult.tableSuccess(users, count);
+    }
+
+
+    /**
+     * 切换用户状态
+     *
+     * @param userId 用户ID
+     * @return 切换结果
+     */
+    @ResponseBody
+    @PutMapping("/state")
+    public ResponseResult<Object> switchState(@NotNull @Param("userId") Long userId) {
+        int result = userService.switchState(userId);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 返回用户编辑页面并填充用户信息
+     *
+     * @param userId 用户ID
+     * @param model  model
+     * @return 用户编辑页面
+     */
+    @GetMapping("/editPage")
+    public String editPage(@Param("userId") Long userId, Model model) {
+        User user = userService.queryById(userId);
+        model.addAttribute(user);
+        return "user/user-edit";
+    }
+
+    /**
+     * 更新用户信息
+     *
+     * @param userDto 用户信息
+     * @return 更新结果
+     */
+    @ResponseBody
+    @PutMapping
+    public ResponseResult<Object> update(@Validated(User.Update.class) UserDto userDto) {
+        userDto.setUpdateTime(new Date());
+        int result = userService.update(userDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 }

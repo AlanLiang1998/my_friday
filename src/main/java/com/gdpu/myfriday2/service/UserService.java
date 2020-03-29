@@ -17,4 +17,28 @@ public interface UserService {
     List<User> queryAllByKeyword(KeywordDto keyword);
 
     long countAllByKeyword(KeywordDto keywordDto);
+
+    /**
+     * 切换用户状态
+     *
+     * @param userId 用户ID
+     * @return 切换结果
+     */
+    int switchState(Long userId);
+
+    /**
+     * 根据用户ID查询用户
+     *
+     * @param userId 用户ID
+     * @return 用户
+     */
+    User queryById(Long userId);
+
+    /**
+     * 更新用户信息
+     *
+     * @param userDto 用户信息
+     * @return 更新结果
+     */
+    int update(UserDto userDto);
 }

@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class User {
     private Long userId;
-    @NotBlank(message = "用户名不能为空")
+    @NotBlank(message = "用户名不能为空", groups = {Create.class, Update.class})
     private String username;
 
     private String password;
@@ -19,16 +19,16 @@ public class User {
     private String nickname;
 
     private String avatar;
-    @NotBlank(message = "邮箱不能为空")
-    @Email(message = "邮箱格式不合法")
+    @NotBlank(message = "邮箱不能为空", groups = {Create.class, Update.class})
+    @Email(message = "邮箱格式不合法", groups = {Create.class, Update.class})
     private String email;
-    @NotBlank(message = "手机号码不能为空")
+    @NotBlank(message = "手机号码不能为空", groups = {Create.class, Update.class})
     private String phone;
 
     private String sex;
 
     private Date birthday;
-    @NotNull
+    @NotNull(message = "请为用户选择状态", groups = {Create.class})
     private Byte status;
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date createTime;
@@ -37,4 +37,10 @@ public class User {
 
     private Role role;
 
+
+    public interface Create {
+    }
+
+    public interface Update {
+    }
 }

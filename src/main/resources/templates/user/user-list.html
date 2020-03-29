@@ -39,9 +39,10 @@
             <!--工具栏-->
             <div class="layui-card">
                 <!--操作栏-->
-                <div class="layui-card-header layui-inline">
-                    <button class="layui-btn layui-btn-danger" id="delAllBtn"><i class="layui-icon"></i>批量删除</button>
-                    <button class="layui-btn layui-btn-warm"><i class="layui-icon layui-icon-close-fill"></i>禁用</button>
+                <div class="layui-card-header layui-inline" id="toolbar">
+                    <button class="layui-btn layui-btn-danger layui-btn-disabled" id="delAllBtn"><i
+                            class="layui-icon"></i>批量删除
+                    </button>
                     <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',460,500)">
                         <i class="layui-icon"></i>添加
                     </button>
@@ -55,7 +56,7 @@
                                    class="layui-input">
                         </div>
                         <div class="layui-inline layui-show-xs-block">
-                            <button class="layui-btn" lay-submit="" lay-filter="search">
+                            <button class="layui-btn" lay-submit="" lay-filter="user-search">
                                 <i class="layui-icon">&#xe615;</i>
                             </button>
                         </div>
@@ -63,9 +64,9 @@
                 </div>
                 <div class="layui-card-body">
                     <!--数据表格-->
-                    <table class="layui-table layui-form" id="user-table">
+                    <table class="layui-table layui-form" id="user-table" lay-filter="user-table-filter">
                         <!--列工具栏-->
-                        <script type="text/html" id="barDemo">
+                        <script type="text/html" id="rowBar">
                             <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
                             <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
                         </script>
@@ -122,19 +123,93 @@
                     , {field: 'phone', title: '电话', width: 120}
                     , {field: 'email', title: '邮箱', width: 150}
                     , {
-                    field: 'status', title: '状态', width: 60, templet: function (data) {
-                        return data.status === 1 ? '激活' : '停用';
+                    field: 'status', title: '状态', width: 100, templet: function (data) {
+                        let isChecked = data.status == 1 ? "checked" : "";
+                        return '<input type="checkbox" lay-skin="switch" lay-text="启用|禁用" lay-filter="status-filter"' + isChecked + '> ';
                     }
                 }
                     , {field: 'createTime', title: '创建日期', width: 150}
                     , {field: 'updateTime', title: '最后更新', width: 150}
-                    , {fixed: 'right', width: 140, align: 'center', toolbar: '#barDemo'}
+                    , {fixed: 'right', width: 140, align: 'center', toolbar: '#rowBar'}
                 ]
             ]
         });
 
+        //监听状态开关
+        form.on('switch(status-filter)', function (obj) {
+            let status = obj.elem.checked ? 0 : 1;
+            let userId = obj.othis.parents('tr').find("td").eq(1).text();
+            let username = obj.othis.parents('tr').find("td").eq(2).text()
+            let op = (status === 1 ? '停用' : '启用');
+            let msg = '是否' + op + '用户:' + username + '?';
+            let x = obj.elem.checked;
+            layer.open({
+                content: msg
+                , btn: ['确定', '取消']
+                , yes: function (index) {
+                    obj.elem.checked = x;
+                    $.ajax({
+                        url: '/user/state',
+                        data: {userId: userId},
+                        type: 'PUT',
+                        success: function (result) {
+                            if (result.code == 200) {
+                                layer.close(index);
+                                form.render();
+                            }
+                        },
+                        error: function () {
+                            obj.elem.checked = !x;
+                            form.render();
+                            layer.close(index);
+                            layer.msg('修改失败');
+                        }
+                    });
+                }
+                , btn2: function (index) {
+                    obj.elem.checked = !x;
+                    form.render();
+                    layer.close(index);
+                }
+                , cancel: function () {
+                    //右上角关闭回调
+                    obj.elem.checked = !x;
+                    form.render();
+                }
+            });
+            return false;
+
+        });
+
+        //监听复选框
+        table.on('checkbox(user-table-filter)', function (obj) {
+            if (obj.checked) {
+                $('#delAllBtn').removeClass('layui-btn-disabled');
+            } else {
+                $('#delAllBtn').addClass('layui-btn-disabled');
+            }
+        });
+
+        //监听工具条
+        table.on('tool(user-table-filter)', function (obj) {
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+
+            if (layEvent === 'del') { //删除
+                layer.confirm('真的删除行么', function (index) {
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.close(index);
+                    //向服务端发送删除指令
+                });
+            } else if (layEvent === 'edit') { //编辑
+                xadmin.open('编辑用户', '/user/editPage?userId=' + data.userId, 460, 500);
+            }
+        });
+
+
         //监听提交
-        form.on('submit(search)', function (data) {
+        form.on('submit(user-search)', function (data) {
             table.render({
                 elem: '#user-table'
                 , url: '/user?keyword=' + data.field.keyword //数据接口
@@ -164,13 +239,14 @@
                         , {field: 'phone', title: '电话', width: 120}
                         , {field: 'email', title: '邮箱', width: 150}
                         , {
-                        field: 'status', title: '状态', width: 60, templet: function (data) {
-                            return data.status === 1 ? '激活' : '停用';
+                        field: 'status', title: '状态', width: 100, templet: function (data) {
+                            let isChecked = data.status == 1 ? "checked" : "";
+                            return '<input type="checkbox" lay-skin="switch" lay-text="启用|禁用" lay-filter="status-filter"' + isChecked + '> ';
                         }
                     }
                         , {field: 'createTime', title: '创建日期', width: 150}
                         , {field: 'updateTime', title: '最后更新', width: 150}
-                        , {fixed: 'right', width: 140, align: 'center', toolbar: '#barDemo'}
+                        , {fixed: 'right', width: 140, align: 'center', toolbar: '#rowBar'}
                     ]
                 ]
             });
@@ -180,7 +256,7 @@
     });
 
     /*用户-停用*/
-    function member_stop(obj, id) {
+    function user_disable(obj, id) {
         layer.confirm('确认要停用吗？', function (index) {
 
             if ($(obj).attr('title') == '启用') {

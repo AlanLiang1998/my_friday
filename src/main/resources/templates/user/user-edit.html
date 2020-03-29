@@ -20,26 +20,27 @@
 </head>
 <!--*/-->
 <head th:replace="fragments :: head(~{::title})">
-    <title>friday-添加用户</title>
+    <title>friday-用户管理</title>
 </head>
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
-        <form class="layui-form">
+        <form class="layui-form" id="user-form">
+            <input type="hidden" name="userId" th:value="${user.userId}"/>
             <div class="layui-form-item">
                 <label for="username" class="layui-form-label">
                     <span class="x-red">*</span>用户名
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="username" name="username" required="" lay-verify="username"
-                           autocomplete="off" class="layui-input">
+                           autocomplete="off" class="layui-input" th:value="${user.username}" readonly>
                 </div>
             </div>
             <div class="layui-form-item">
                 <label for="nickname" class="layui-form-label">昵称</label>
                 <div class="layui-input-inline">
                     <input type="text" id="nickname" name="nickname" required=""
-                           autocomplete="off" class="layui-input">
+                           autocomplete="off" class="layui-input" th:value="${user.nickname}">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -48,7 +49,7 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="phone" name="phone" required="" lay-verify="required|phone"
-                           autocomplete="off" class="layui-input">
+                           autocomplete="off" class="layui-input" th:value="${user.phone}">
                 </div>
             </div>
             <div class="layui-form-item">
@@ -57,14 +58,14 @@
                 </label>
                 <div class="layui-input-inline">
                     <input type="text" id="email" name="email" required="" lay-verify="required|email"
-                           autocomplete="off" class="layui-input">
+                           autocomplete="off" class="layui-input" th:value="${user.email}">
                 </div>
             </div>
             <div class="layui-form-item">
                 <label class="layui-form-label"><span class="x-red">*</span>性别</label>
                 <div class="layui-input-block">
-                    <input type="radio" name="sex" value="M" title="男" checked/>
-                    <input type="radio" name="sex" value="F" title="女"/>
+                    <input type="radio" name="sex" value="M" title="男" th:checked="${user.sex=='M'}"/>
+                    <input type="radio" name="sex" value="F" title="女" th:checked="${user.sex=='F'}"/>
                 </div>
             </div>
             <div class="layui-form-item">
@@ -72,26 +73,16 @@
                     <span class="x-red">*</span>角色
                 </label>
                 <div class="layui-input-inline">
-                    <select name="roleId" lay-verify="role" id="role-select">
+                    <select name="roleId" lay-verify="role" id="role-select" th:value="${user.role.roleId}">
                         <option value="0">请选择一个角色</option>
                     </select>
                 </div>
             </div>
             <div class="layui-form-item">
-                <label class="layui-form-label">
-                    <span class="x-red">*</span>状态
-                </label>
-                <div class="layui-input-inline" style="margin-top: 5px">
-                    <input type="checkbox" name="status" lay-skin="switch" lay-text="激活|禁用" value="1" checked/>
-                </div>
-            </div>
-
-            <div class="layui-form-item">
                 <div class="layui-input-block">
-                    <button class="layui-btn" lay-submit lay-filter="add" style="background-color: #5FB878">
-                        立即提交
+                    <button class="layui-btn" lay-submit lay-filter="edit" style="background-color: #5FB878">
+                        立即更新
                     </button>
-                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
                 </div>
             </div>
         </form>
@@ -109,13 +100,17 @@
                 url: '/role/list',
                 type: 'GET',
                 success: function (result) {
+                    let id = [[${user.role.roleId}]];
                     $.each(result, function () {
                         let roleId = $(this)[0].roleId;
                         let roleName = $(this)[0].roleName;
                         let roleOption = $('<option></option>').val(roleId).text(roleName);
+                        if (roleId == id) {
+                            roleOption.prop('selected', true);
+                        }
                         $('#role-select').append(roleOption);
                     });
-                    form.render('select');
+                    form.render();
                 }
             });
         });
@@ -146,29 +141,35 @@
         });
 
         //监听提交
-        form.on('submit(add)',
-            function (data) {
-                //发异步，把数据提交给后台
-                $.ajax({
-                    url: '/user',
-                    type: 'POST',
-                    data: data.field,
-                    success: function (result) {
-                        layer.alert("添加成功", {icon: 6}, function () {
+        form.on('submit(edit)', function (data) {
+            $.ajax({
+                url: '/user',
+                type: 'PUT',
+                data: data.field,
+                success: function (result) {
+                    if (result.code == 200) {
+                        layer.alert("更新成功", {icon: 6}, function () {
                             //关闭当前frame
                             xadmin.close();
                             // 可以对父窗口进行刷新
                             xadmin.father_reload();
                         });
-                    },
-                    error: function (result) {
-                        let error = JSON.parse(result.responseText);
-                        layer.alert(error.message, {icon: 5});
+                    } else {
+                        layer.alert("更新失败", {icon: 5}, function () {
+                            //关闭当前frame
+                            xadmin.close();
+                            // 可以对父窗口进行刷新
+                            xadmin.father_reload();
+                        });
                     }
-                });
-
-                return false;
+                },
+                error: function (result) {
+                    let error = JSON.parse(result.responseText);
+                    layer.alert(error.message, {icon: 5});
+                }
             });
+            return false;
+        });
 
     });</script>
 <script>var _hmt = _hmt || [];
