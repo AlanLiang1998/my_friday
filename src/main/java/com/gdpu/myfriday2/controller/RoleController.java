@@ -1,6 +1,7 @@
 package com.gdpu.myfriday2.controller;
 
 import com.gdpu.myfriday2.dto.KeywordDto;
+import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.model.Role;
 import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.service.RoleService;
@@ -9,10 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,4 +62,30 @@ public class RoleController {
         long count = roleService.countAllByKeyword(keywordDto);
         return ResponseResult.tableSuccess(roles, count);
     }
+
+    /**
+     * 跳转至添加用户页面
+     *
+     * @return 添加用户页面
+     */
+    @GetMapping("/addPage")
+    public String addPage() {
+        return "role/role-add";
+    }
+
+    /**
+     * 新增用户
+     *
+     * @param userDto 用户DTO
+     * @return 新增结果
+     */
+   /* @ResponseBody
+    @PostMapping
+    public ResponseResult<Object> create(@Validated UserDto userDto) {
+        userDto.setPassword("123456");
+        userDto.setCreateTime(new Date());
+        userDto.setUpdateTime(userDto.getCreateTime());
+        int result = userService.create(userDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }*/
 }
