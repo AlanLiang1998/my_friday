@@ -30,9 +30,9 @@ public class User {
     private Date birthday;
     @NotNull(message = "请为用户选择状态", groups = {Create.class})
     private Byte status;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     private Date createTime;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
     private Date updateTime;
 
     private Role role;
