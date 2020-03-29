@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
@@ -126,5 +127,31 @@ public class UserController {
         userDto.setUpdateTime(new Date());
         int result = userService.update(userDto);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 删除用户
+     *
+     * @param userId 用户ID
+     * @return 删除结果
+     */
+    @ResponseBody
+    @DeleteMapping
+    public ResponseResult<Object> delete(@NotNull @RequestParam("userId") Long userId) {
+        int result = userService.delete(userId);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 批量删除用户
+     *
+     * @param idList 用户ID列表
+     * @return 删除结果
+     */
+    @ResponseBody
+    @DeleteMapping("/list")
+    public ResponseResult<Object> deleteBatch(@NotEmpty @RequestBody List<Long> idList) {
+        int result = userService.deleteBatch(idList);
+        return result == idList.size() ? ResponseResult.success() : ResponseResult.failure();
     }
 }

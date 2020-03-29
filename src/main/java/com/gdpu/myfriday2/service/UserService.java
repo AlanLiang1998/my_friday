@@ -41,4 +41,20 @@ public interface UserService {
      * @return 更新结果
      */
     int update(UserDto userDto);
+
+    /**
+     * 删除用户
+     *
+     * @param userId 用户ID
+     * @return 删除结果
+     */
+    int delete(Long userId);
+
+    /**
+     * 批量删除用户
+     *
+     * @param idList 用户ID列表
+     * @return 删除结果
+     */
+    int deleteBatch(List<Long> idList);
 }

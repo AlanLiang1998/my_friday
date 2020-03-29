@@ -227,4 +227,28 @@ public class UserServiceImpl implements UserService {
         }
         return 1;
     }
+
+    /**
+     * 删除用户
+     *
+     * @param userId 用户ID
+     * @return 删除结果
+     */
+    @Override
+    public int delete(Long userId) {
+        return userMapper.deleteByPrimaryKey(userId);
+    }
+
+    /**
+     * 批量删除用户
+     *
+     * @param idList 用户ID列表
+     * @return 删除结果
+     */
+    @Override
+    public int deleteBatch(List<Long> idList) {
+        UserExample userExample = new UserExample();
+        userExample.createCriteria().andUserIdIn(idList);
+        return userMapper.deleteByExample(userExample);
+    }
 }

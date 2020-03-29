@@ -40,8 +40,8 @@
             <div class="layui-card">
                 <!--操作栏-->
                 <div class="layui-card-header layui-inline" id="toolbar">
-                    <button class="layui-btn layui-btn-danger layui-btn-disabled" id="delAllBtn"><i
-                            class="layui-icon"></i>批量删除
+                    <button class="layui-btn layui-btn-danger layui-btn-disabled" id="delAllBtn">
+                        <i class="layui-icon"></i>批量删除
                     </button>
                     <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',460,500)">
                         <i class="layui-icon"></i>添加
@@ -154,6 +154,7 @@
                         type: 'PUT',
                         success: function (result) {
                             if (result.code == 200) {
+                                layer.msg('修改成功', {icon: 6});
                                 layer.close(index);
                                 form.render();
                             }
@@ -162,7 +163,7 @@
                             obj.elem.checked = !x;
                             form.render();
                             layer.close(index);
-                            layer.msg('修改失败');
+                            layer.msg('修改失败', {icon: 5});
                         }
                     });
                 }
@@ -194,21 +195,35 @@
         table.on('tool(user-table-filter)', function (obj) {
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
-            var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
 
             if (layEvent === 'del') { //删除
-                layer.confirm('真的删除行么', function (index) {
-                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
-                    layer.close(index);
-                    //向服务端发送删除指令
+                let msg = '确认删除用户:' + data.username + ' 吗?';
+                layer.confirm(msg, {icon: 3, title: '提示'}, function (index) {
+                    $.ajax({
+                        url: '/user',
+                        data: {userId: data.userId},
+                        type: 'DELETE',
+                        success: function (result) {
+                            if (result.code == 200) {
+                                obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                                layer.msg('删除成功', {icon: 1});
+                            } else {
+                                layer.msg("删除失败", {icon: 5});
+                            }
+                        },
+                        error: function (result) {
+                            let error = JSON.parse(result.responseText);
+                            layer.alert(error.message, {icon: 5});
+                        }
+                    });
+
                 });
             } else if (layEvent === 'edit') { //编辑
                 xadmin.open('编辑用户', '/user/editPage?userId=' + data.userId, 460, 500);
             }
         });
 
-
-        //监听提交
+        //监听搜索提交
         form.on('submit(user-search)', function (data) {
             table.render({
                 elem: '#user-table'
@@ -253,52 +268,40 @@
 
             return false;
         });
+
+        //批量删除
+        $('#delAllBtn').click(function () {
+            var checkStatus = table.checkStatus('user-table');
+            var msg = '确认删除选中的' + checkStatus.data.length + '行吗？';
+            layer.confirm(msg, {icon: 3, title: '提示'}, function (index) {
+                var idList = [];
+                $.each(checkStatus.data, function () {
+                    idList.push($(this)[0].userId);
+                });
+                $.ajax({
+                    url: '/user/list',
+                    type: 'DELETE',
+                    data: JSON.stringify(idList),
+                    contentType: 'application/json',
+                    success: function (result) {
+                        if (result.code == 200) {
+                            layer.msg('删除成功', {icon: 1});
+                            //xadmin.father_reload();
+                            table.reload('user-table');
+                        } else {
+                            layer.msg('删除失败', {icon: 5});
+                        }
+                    },
+                    error: function (result) {
+                        let error = JSON.parse(result.responseText);
+                        layer.alert(error.message, {icon: 5});
+                    }
+                });
+            });
+        });
     });
 
-    /*用户-停用*/
-    function user_disable(obj, id) {
-        layer.confirm('确认要停用吗？', function (index) {
 
-            if ($(obj).attr('title') == '启用') {
-
-                //发异步把用户状态进行更改
-                $(obj).attr('title', '停用')
-                $(obj).find('i').html('&#xe62f;');
-
-                $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
-                layer.msg('已停用!', {icon: 5, time: 1000});
-
-            } else {
-                $(obj).attr('title', '启用')
-                $(obj).find('i').html('&#xe601;');
-
-                $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
-                layer.msg('已启用!', {icon: 5, time: 1000});
-            }
-
-        });
-    }
-
-    /*用户-删除*/
-    function member_del(obj, id) {
-        layer.confirm('确认要删除吗？', function (index) {
-            //发异步删除数据
-            $(obj).parents("tr").remove();
-            layer.msg('已删除!', {icon: 1, time: 1000});
-        });
-    }
-
-
-    function delAll(argument) {
-
-        var data = tableCheck.getData();
-
-        layer.confirm('确认要删除吗？' + data, function (index) {
-            //捉到所有被选中的，发异步进行删除
-            layer.msg('删除成功', {icon: 1});
-            $(".layui-form-checked").not('.header').parents('tr').remove();
-        });
-    }
 </script>
 <script>var _hmt = _hmt || [];
 (function () {

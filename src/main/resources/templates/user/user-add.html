@@ -163,7 +163,7 @@
                     },
                     error: function (result) {
                         let error = JSON.parse(result.responseText);
-                        layer.alert(error.message, {icon: 5});
+                        layer.msg(error.message, {icon: 5});
                     }
                 });
 
