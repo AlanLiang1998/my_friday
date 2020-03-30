@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -79,6 +80,30 @@ public class PermissionController {
     @PostMapping
     public ResponseResult<Object> create(@Validated @RequestBody Permission permission) {
         int result = permissionService.create(permission);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 跳转至编辑权限页面
+     *
+     * @return 编辑限页面
+     */
+    @GetMapping("/editPage")
+    public String editPage(@RequestParam("id") Long id, Model model) {
+        model.addAttribute("permission", permissionService.queryById(id));
+        return "/permission/permission-edit";
+    }
+
+    /**
+     * 更新权限
+     *
+     * @param permission 新权限
+     * @return 更新结果
+     */
+    @ResponseBody
+    @PutMapping
+    public ResponseResult<Object> update(@Validated @RequestBody Permission permission) {
+        int result = permissionService.update(permission);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 }

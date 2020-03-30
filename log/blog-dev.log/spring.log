@@ -4791,3 +4791,219 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2020-03-30 20:03:21.398 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
 2020-03-30 20:03:21.398 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
 2020-03-30 20:03:21.399 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:37:32.394 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 20:37:32.396 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 20:37:32.398 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:37:32.398 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 20:37:32.399 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:37:32.399 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 20:37:32.400 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 20:37:32.401 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:37:32.404 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 20:37:32.405 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 20:37:32.405 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 20:37:32.406 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 20:37:36.762 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:37:36.763 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:37:36.764 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:42:12.718  INFO 21736 --- [Thread-27] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:42:12.720  INFO 21736 --- [Thread-27] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
+2020-03-30 20:42:13.247  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:42:13.247 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:42:13.247  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:42:13.512  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:42:13.513  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:42:13.513  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:42:13.526  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:42:13.526  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 276 ms
+2020-03-30 20:42:13.551  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:42:13.600  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} inited
+2020-03-30 20:42:13.708  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:42:13.724  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:42:13.830  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:42:13.867  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:42:13.868  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.673 seconds (JVM running for 3929.962)
+2020-03-30 20:42:13.870  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:42:17.105  INFO 21736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 20:42:17.108  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 20:42:17.110  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-03-30 20:42:17.500 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 20:42:17.500 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 20:42:17.503 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 20:42:17.504 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 20:42:17.505 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 20:42:17.511 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 20:42:17.513 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 20:42:17.513 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 20:42:17.513 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 20:42:17.513 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:42:17.513 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:42:17.517 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:42:20.626 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:42:20.626 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:42:20.627 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:42:43.687 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 20:42:43.688 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 20:42:43.690 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 20:42:43.691 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 20:42:43.691 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 20:42:43.702 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 20:42:43.704 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 20:42:43.704 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 20:42:43.705 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 20:42:43.741 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:42:43.741 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:42:43.743 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:42:45.210 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:42:45.211 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:42:45.211 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:52:50.809  INFO 21736 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:52:50.809  INFO 21736 --- [Thread-32] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closed
+2020-03-30 20:52:51.435  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:52:51.436 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:52:51.436  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:52:51.790  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:52:51.791  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:52:51.791  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:52:51.807  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:52:51.807  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 369 ms
+2020-03-30 20:52:51.842  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:52:51.891  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} inited
+2020-03-30 20:52:52.006  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:52:52.016  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:52:52.060  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:52:52.079  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:52:52.080  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.684 seconds (JVM running for 4568.174)
+2020-03-30 20:52:52.081  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:52:54.527  INFO 21736 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:52:54.529  INFO 21736 --- [Thread-37] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closed
+2020-03-30 20:52:54.942  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:52:54.942 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:52:54.942  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:52:55.180  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:52:55.180  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:52:55.180  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:52:55.194  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:52:55.194  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 250 ms
+2020-03-30 20:52:55.222  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:52:55.252  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} inited
+2020-03-30 20:52:55.349  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:52:55.359  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:52:55.414  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:52:55.440  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:52:55.440  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.531 seconds (JVM running for 4571.535)
+2020-03-30 20:52:55.441  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:52:55.561  INFO 21736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 20:52:55.562  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 20:52:55.565  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-03-30 20:52:56.239 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 20:52:56.239 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 20:52:56.242 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 20:52:56.243 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 20:52:56.244 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 20:52:56.251 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 20:52:56.253 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 20:52:56.253 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 20:52:56.254 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 20:52:56.254 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:52:56.255 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:52:56.258 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:53:00.228 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission where permission_id = ? 
+2020-03-30 20:53:00.229 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==> Parameters: 1(Long)
+2020-03-30 20:53:00.230 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : <==      Total: 1
+2020-03-30 20:53:00.291 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:53:00.291 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:53:00.292 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:53:11.951 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission where permission_id = ? 
+2020-03-30 20:53:11.952 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==> Parameters: 3(Long)
+2020-03-30 20:53:11.952 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : <==      Total: 1
+2020-03-30 20:53:12.026 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:53:12.027 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:53:12.028 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:53:23.989 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission where permission_id = ? 
+2020-03-30 20:53:23.991 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==> Parameters: 6(Long)
+2020-03-30 20:53:23.992 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : <==      Total: 1
+2020-03-30 20:53:24.061 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:53:24.061 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:53:24.062 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:53:36.797 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission where permission_id = ? 
+2020-03-30 20:53:36.798 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==> Parameters: 9(Long)
+2020-03-30 20:53:36.798 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : <==      Total: 1
+2020-03-30 20:53:36.860 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:53:36.860 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:53:36.861 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:59:19.947  INFO 21736 --- [Thread-42] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:59:19.949  INFO 21736 --- [Thread-42] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closed
+2020-03-30 20:59:20.544  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:59:20.544 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:59:20.544  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:59:21.035  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:59:21.037  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:59:21.037  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:59:21.074  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:59:21.074  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 526 ms
+2020-03-30 20:59:21.125  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:59:21.199  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} inited
+2020-03-30 20:59:21.366  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:59:21.378  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:59:21.428  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:59:21.449  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:59:21.449  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.943 seconds (JVM running for 4957.543)
+2020-03-30 20:59:21.450  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:59:23.896  INFO 21736 --- [Thread-47] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:59:23.898  INFO 21736 --- [Thread-47] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closed
+2020-03-30 20:59:24.334  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:59:24.335 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:59:24.335  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:59:24.804  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:59:24.805  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:59:24.805  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:59:24.825  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:59:24.825  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 488 ms
+2020-03-30 20:59:24.896  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:59:24.980  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} inited
+2020-03-30 20:59:25.246  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:59:25.266  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:59:25.329  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:59:25.349  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:59:25.350  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 1.053 seconds (JVM running for 4961.444)
+2020-03-30 20:59:25.351  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:59:25.385  INFO 21736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 20:59:25.386  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 20:59:25.387  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2020-03-30 20:59:25.960 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 20:59:25.960 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 20:59:25.962 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 20:59:25.964 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 20:59:25.964 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 20:59:25.973 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 20:59:25.975 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 20:59:25.975 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:59:25.975 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 20:59:25.975 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:59:25.976 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 20:59:25.979 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:59:33.050 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission where permission_id = ? 
+2020-03-30 20:59:33.050 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : ==> Parameters: 26(Long)
+2020-03-30 20:59:33.051 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByPrimaryKey             : <==      Total: 1
+2020-03-30 20:59:33.112 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:59:33.112 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:59:33.113 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:59:43.237 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.updateByPrimaryKeySelective    : ==>  Preparing: update permission SET parent_id = ?, permission_name = ?, css = ?, href = ?, type = ?, permission = ?, sort = ? where permission_id = ? 
+2020-03-30 20:59:43.238 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.updateByPrimaryKeySelective    : ==> Parameters: 0(Long), 测试菜单1(String), css1(String), href1(String), 1(Integer), sys:test1(String), 10001(Integer), 26(Long)
+2020-03-30 20:59:43.245 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-03-30 20:59:44.325 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:59:44.325 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:59:44.326 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:59:46.691 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.P.selectByPrimaryKey             : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission where permission_id = ? 
+2020-03-30 20:59:46.692 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.P.selectByPrimaryKey             : ==> Parameters: 26(Long)
+2020-03-30 20:59:46.692 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.P.selectByPrimaryKey             : <==      Total: 1
+2020-03-30 20:59:46.744 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:59:46.744 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:59:46.745 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 27
+2020-03-30 20:59:58.722 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.P.updateByPrimaryKeySelective    : ==>  Preparing: update permission SET parent_id = ?, permission_name = ?, css = ?, href = ?, type = ?, permission = ?, sort = ? where permission_id = ? 
+2020-03-30 20:59:58.722 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.P.updateByPrimaryKeySelective    : ==> Parameters: 0(Long), 测试菜单(String), css(String), href(String), 1(Integer), sys:test(String), 1000(Integer), 26(Long)
+2020-03-30 20:59:58.723 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.P.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-03-30 21:00:00.266 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 21:00:00.267 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 21:00:00.267 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 27

@@ -41,4 +41,20 @@ public interface PermissionService {
      * @return 结果
      */
     int create(Permission permission);
+
+    /**
+     * 查询指定权限
+     *
+     * @param id 权限ID
+     * @return 权限
+     */
+    Permission queryById(Long id);
+
+    /**
+     * 更新权限
+     *
+     * @param permission 新权限
+     * @return 更新结果
+     */
+    int update(Permission permission);
 }

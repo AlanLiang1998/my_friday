@@ -31,6 +31,17 @@ public class PermissionServiceImpl implements PermissionService {
     private RolePermissionMapper rolePermissionMapper;
 
     @Override
+    public int update(Permission permission) {
+        return permissionMapper.updateByPrimaryKeySelective(permission);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Permission queryById(Long id) {
+        return permissionMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
     public int create(Permission permission) {
         return permissionMapper.insertSelective(permission);
     }

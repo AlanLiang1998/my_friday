@@ -31,7 +31,7 @@
                         <form class="layui-form layui-col-md12 x-so" id="layuiFormPermission">
                             <a class="layui-btn" id="crollAll">折叠展开</a>
                             <a class="layui-btn" onclick="xadmin.open('新增权限','/permission/addPage',500,500)"
-                               permission="sys:menu:add"><i class="layui-icon"></i>新增权限</a>
+                               permission="sys:menu:add"><i class="layui-icon"></i>新增菜单</a>
                         </form>
                     </div>
 
@@ -133,7 +133,7 @@
 
                 });
             } else if (obj.event === 'edit') {
-                xadmin.open('编辑用户信息', '/permission/edit/?id=' + data.id);
+                xadmin.open('编辑菜单信息', '/permission/editPage/?id=' + data.id,500,500);
             }
         })
         // checkPermission()

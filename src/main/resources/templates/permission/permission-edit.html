@@ -15,15 +15,17 @@
 <div class="x-body">
 
     <form class="layui-form">
+        <input type="text" name="permissionId" style="display:none;" autocomplete="off"
+               class="layui-input" th:value="${permission.permissionId}">
         <div class="layui-form-item">
             <label for="L_name" class="layui-form-label">
                 <span class="x-red">*</span>菜单名
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="L_name" name="permissionName" required=""
-                       lay-verify="name" autocomplete="off" class="layui-input">
+                       lay-verify="name" autocomplete="off" class="layui-input" th:value="${permission.permissionName}">
             </div>
-            <div class="layui-form-mid layui-word-aux">
+            <div class=" layui-form-mid layui-word-aux">
                 <span class="x-red">*</span>将会成为菜单名
             </div>
         </div>
@@ -33,7 +35,7 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="L_css" name="css" required="" lay-verify="css"
-                       autocomplete="off" class="layui-input">
+                       autocomplete="off" class="layui-input" th:value="${permission.css}">
             </div>
             <div class="layui-form-mid layui-word-aux">
             </div>
@@ -44,7 +46,7 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="L_href" name="href" lay-verify="href"
-                       autocomplete="off" class="layui-input">
+                       autocomplete="off" class="layui-input" th:value="${permission.href}">
             </div>
             <div class="layui-form-mid layui-word-aux">
                 <span class="x-red"></span>
@@ -53,7 +55,7 @@
         <div class="layui-form-item">
             <label class="layui-form-label">类型</label>
             <div class="layui-input-inline">
-                <select id="selectType" name="type" lay-filter="type">
+                <select id="selectType" name="type" lay-filter="type" th:value="${permission.type}">
                     <option value="1">菜单</option>
                     <option value="2">按钮</option>
                 </select>
@@ -65,9 +67,10 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="L_permission" name="permission"
-                       lay-verify="permission" autocomplete="off" class="layui-input">
+                       lay-verify="permission" autocomplete="off" class="layui-input"
+                       th:value="${permission.permission}">
             </div>
-            <div class="layui-form-mid layui-word-aux">
+            <div class=" layui-form-mid layui-word-aux">
                 <span class="x-red"></span>
             </div>
         </div>
@@ -77,22 +80,23 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="L_sort" name="sort" required=""
-                       lay-verify="sort" autocomplete="off" class="layui-input">
+                       lay-verify="sort" autocomplete="off" class="layui-input" th:value="${permission.sort}">
             </div>
-            <div class="layui-form-mid layui-word-aux">
+            <div class=" layui-form-mid layui-word-aux">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="col-md-2 control-label layui-form-label">上级菜单</label>
             <div class="col-md-10">
                 <input type="text" id="parentId" name="parentId"
-                       lay-verify="parentId" style="display:none;" autocomplete="off" class="layui-input">
+                       lay-verify="parentId" style="display:none;" autocomplete="off" class="layui-input"
+                       th:value="${permission.parentId}">
                 <ul id="treeDemo" class="ztree"></ul>
             </div>
         </div>
         <div class="layui-form-item">
             <div class="layui-input-block">
-                <button class="layui-btn" lay-submit lay-filter="add" style="background-color: #5FB878">
+                <button class="layui-btn" lay-submit lay-filter="edit" style="background-color: #5FB878">
                     立即提交
                 </button>
                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
@@ -104,9 +108,7 @@
     layui.use(['form', 'layer', 'laydate'], function () {
         $ = layui.jquery;
         var form = layui.form
-            , layer = layui.layer
-            , laydate = layui.laydate;
-
+            , layer = layui.layer;
 
         //自定义验证规则
         form.verify({
@@ -123,7 +125,7 @@
         });
 
         //监听提交
-        form.on('submit(add)', function (data) {
+        form.on('submit(edit)', function (data) {
             var permissionIds = getCheckedMenuIds();
             if (data.field.sort.length <= 0) {
                 layer.msg('请填写排序值');
@@ -133,12 +135,12 @@
                 data.field.parentId = permissionIds[0];
                 $.ajax({
                     url: '/permission',
-                    type: "POST",
+                    type: "PUT",
                     contentType: "application/json; charset=utf-8",
                     data: JSON.stringify(data.field),
                     success: function (result) {
                         if (result.code == 200) {
-                            layer.alert("保存成功", {icon: 6}, function () {
+                            layer.alert("更新成功", {icon: 6}, function () {
                                 //关闭当前frame
                                 xadmin.close();
                                 // 可以对父窗口进行刷新
