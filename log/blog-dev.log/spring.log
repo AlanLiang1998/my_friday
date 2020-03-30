@@ -3666,3 +3666,1128 @@ Consider defining a bean of type 'com.gdpu.myfriday2.service.RoleService' in you
 2020-03-30 17:09:44.300 DEBUG 15620 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.deleteByPrimaryKey  : ==>  Preparing: delete from role where role_id = ? 
 2020-03-30 17:09:44.300 DEBUG 15620 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.deleteByPrimaryKey  : ==> Parameters: 5(Long)
 2020-03-30 17:09:44.302 DEBUG 15620 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.deleteByPrimaryKey  : <==    Updates: 1
+2020-03-30 17:17:02.654 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:17:02.654 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:17:02.656 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:17:02.656 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:17:02.656 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:17:02.661 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:17:02.663 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:17:02.663 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:17:02.664 DEBUG 15620 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:17:02.706 DEBUG 15620 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 17:17:02.706 DEBUG 15620 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:17:02.708 DEBUG 15620 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 17:17:02.709 DEBUG 15620 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 17:17:02.710 DEBUG 15620 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 17:17:02.710 DEBUG 15620 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 17:17:02.726 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:17:02.727 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:17:02.729 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:17:02.730 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:17:02.730 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:17:02.733 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:17:02.735 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:17:02.735 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:17:02.736 DEBUG 15620 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:48:03.770  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 8352 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 17:48:03.774 DEBUG 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 17:48:03.775  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 17:48:03.834  INFO 8352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-30 17:48:03.834  INFO 8352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-30 17:48:04.970  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 17:48:04.976  INFO 8352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 17:48:04.977  INFO 8352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 17:48:05.044  INFO 8352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 17:48:05.044  INFO 8352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1210 ms
+2020-03-30 17:48:05.143  INFO 8352 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 17:48:05.428  INFO 8352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-30 17:48:05.736  INFO 8352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 17:48:05.786  INFO 8352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 17:48:05.904  INFO 8352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 17:48:05.949  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 17:48:05.952  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 2.839 seconds (JVM running for 3.772)
+2020-03-30 17:48:47.387  INFO 8352 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585386165,1585444080,1585537868; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585559823; JSESSIONID=CFBBA24B7BD5E22F7BA77EE95068732C] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-03-30 17:48:47.393  INFO 8352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 17:48:47.394  INFO 8352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 17:48:47.399  INFO 8352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-03-30 17:48:48.519 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 17:48:48.536 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:48:48.543 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:48:48.543 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:48:48.551 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 17:48:48.551 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:48:48.553 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:48:48.554 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:48:48.554 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 17:48:48.555 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 17:48:48.557 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 17:48:48.564 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:48:48.566 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:48:48.566 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:48:48.567 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:48:48.594 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:48:48.595 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:48:48.596 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:48:48.597 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:48:48.597 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:48:48.608 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:48:48.611 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:48:48.611 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:48:48.611 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:49:08.376  INFO 8352 --- [Thread-11] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 17:49:08.378  INFO 8352 --- [Thread-11] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-30 17:49:09.431  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 8352 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 17:49:09.432 DEBUG 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 17:49:09.432  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 17:49:09.807  WARN 8352 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.gdpu.myfriday2]' package. Please check your configuration.
+2020-03-30 17:49:09.908  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 17:49:09.909  INFO 8352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 17:49:09.909  INFO 8352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 17:49:09.949  INFO 8352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 17:49:09.950  INFO 8352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 465 ms
+2020-03-30 17:49:10.077  INFO 8352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 17:49:10.097  INFO 8352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 17:49:10.156  INFO 8352 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 17:49:10.177  INFO 8352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-30 17:49:10.209  WARN 8352 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+2020-03-30 17:49:10.209  INFO 8352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2020-03-30 17:49:10.210  INFO 8352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 17:49:10.210  INFO 8352 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-30 17:49:10.216  INFO 8352 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-30 17:49:10.223 ERROR 8352 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.gdpu.myfriday2.Myfriday2Application.main(Myfriday2Application.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 24 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:595)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$233c2027.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$233c2027$$FastClassBySpringCGLIB$$ff557b42.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$233c2027.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [D:\idea\myfriday2\target\classes\mapper\PermissionMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:593)
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118)
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.gdpu.myfriday2.model.Permission'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120)
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149)
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116)
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.gdpu.myfriday2.model.Permission
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200)
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89)
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261)
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116)
+	... 46 common frames omitted
+
+2020-03-30 17:49:13.811  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 8352 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 17:49:13.812 DEBUG 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 17:49:13.812  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 17:49:14.157  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 17:49:14.158  INFO 8352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 17:49:14.158  INFO 8352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 17:49:14.171  INFO 8352 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-03-30 17:49:14.171  INFO 8352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 356 ms
+2020-03-30 17:49:14.192  INFO 8352 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 17:49:14.224  INFO 8352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2020-03-30 17:49:14.376  INFO 8352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 17:49:14.388  INFO 8352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 17:49:14.441  INFO 8352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 17:49:14.461  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 17:49:14.461  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.701 seconds (JVM running for 72.281)
+2020-03-30 17:49:14.462  INFO 8352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 17:49:21.303  INFO 8352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 17:49:21.304  INFO 8352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 17:49:21.310  INFO 8352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-03-30 17:49:22.782 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:49:22.782 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:49:22.786 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:49:22.787 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:49:22.788 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:49:22.796 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:49:22.798 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:49:22.798 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:49:22.799 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:49:22.822 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 17:49:22.823 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:49:22.825 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 17:49:22.828 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 17:49:22.828 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 17:49:22.830 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 17:49:22.841 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:49:22.842 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:49:22.844 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:49:22.845 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:49:22.845 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:49:22.858 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:49:22.858 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:49:22.859 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:49:22.860 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:49:22.860 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:49:22.862 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:49:22.868 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 17:50:19.528 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:50:19.529 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:50:19.531 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:50:19.532 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:50:19.532 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:50:19.540 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:50:19.543 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:50:19.543 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:50:19.544 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:50:19.560 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 17:50:19.560 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:50:19.562 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 17:50:19.564 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 17:50:19.564 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 17:50:19.565 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 17:50:19.629 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:50:19.629 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:50:19.632 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:50:19.632 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:50:19.632 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:50:19.639 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:50:19.639 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:50:19.639 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:50:19.642 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:50:19.642 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:50:19.643 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:50:19.644 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 17:51:11.902 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:51:11.903 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:51:11.905 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:51:11.905 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:51:11.905 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:51:11.911 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:51:11.913 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:51:11.913 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:51:11.914 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:51:11.923 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 17:51:11.923 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:51:11.925 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 17:51:11.926 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 17:51:11.926 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 17:51:11.927 DEBUG 8352 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 17:51:11.963 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:51:11.963 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:51:11.966 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:51:11.967 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:51:11.967 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:51:11.967 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:51:11.967 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:51:11.971 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 17:51:11.971 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:51:11.973 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:51:11.973 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:51:11.974 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:51:34.248 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:51:34.249 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:51:34.250 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 17:51:41.259 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:51:41.259 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:51:41.260 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 17:56:22.526 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:56:22.527 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:56:22.531 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:56:22.532 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:56:22.533 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:56:22.539 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:56:22.542 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:56:22.542 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:56:22.543 DEBUG 8352 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:56:22.575 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:56:22.575 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:56:22.578 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 17:58:33.103 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 17:58:33.104 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 17:58:33.106 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 17:58:33.107 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 17:58:33.107 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 17:58:33.111 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 17:58:33.113 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 17:58:33.113 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 17:58:33.114 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 17:58:33.123 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 17:58:33.123 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 17:58:33.126 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 18:01:55.535 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 18:01:55.535 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 18:01:55.537 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 18:01:55.539 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 18:01:55.539 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 18:01:55.540 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 18:01:56.339 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 18:01:56.339 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 18:01:56.341 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 18:01:56.341 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 18:01:56.342 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 18:01:56.346 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 18:01:56.350 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 18:01:56.351 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 18:01:56.352 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:31:02.636 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:31:02.636 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:31:02.638 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:31:02.639 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:31:02.639 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:31:02.644 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:31:02.646 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:31:02.647 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:31:02.648 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:31:02.688 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:31:02.688 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:31:02.690 DEBUG 8352 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:31:02.701 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 19:31:02.701 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:31:02.702 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 19:31:02.703 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 19:31:02.704 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 19:31:02.704 DEBUG 8352 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 19:31:02.730 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:31:02.730 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:31:02.736 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:31:02.737 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:31:02.737 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:31:02.741 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:31:02.744 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:31:02.744 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:31:02.745 DEBUG 8352 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:35:12.014  INFO 8352 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 19:35:12.016  INFO 8352 --- [Thread-18] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2020-03-30 19:35:12.538  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 8352 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 19:35:12.539 DEBUG 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 19:35:12.539  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 19:35:12.759  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 19:35:12.760  INFO 8352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 19:35:12.760  INFO 8352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 19:35:12.772  INFO 8352 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-03-30 19:35:12.772  INFO 8352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 232 ms
+2020-03-30 19:35:12.792  INFO 8352 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 19:35:12.824  INFO 8352 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2020-03-30 19:35:12.979  INFO 8352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 19:35:12.994  INFO 8352 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 19:35:13.064  INFO 8352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 19:35:13.084  INFO 8352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 19:35:13.084  INFO 8352 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.579 seconds (JVM running for 6430.922)
+2020-03-30 19:35:13.085  INFO 8352 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 19:36:23.152  INFO 8352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 19:36:23.153  INFO 8352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 19:36:23.156  INFO 8352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2020-03-30 19:36:23.979 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:36:23.979 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:36:23.983 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:36:23.984 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:36:23.985 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:36:23.991 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:36:23.994 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:36:23.995 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:36:23.995 DEBUG 8352 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:36:24.017 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:36:24.018 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:36:24.024 DEBUG 8352 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:36:24.027 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:36:24.027 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:36:24.030 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:36:24.031 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:36:24.033 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:36:24.040 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:36:24.042 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:36:24.042 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:36:24.042 DEBUG 8352 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:36:24.152 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 19:36:24.153 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:36:24.155 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 19:36:24.156 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 19:36:24.156 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 19:36:24.157 DEBUG 8352 --- [http-nio-8080-exec-7] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 19:36:29.026 ERROR 8352 --- [http-nio-8080-exec-2] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-2] Exception processing template "/permission/permission-add": An error happened during template parsing (template: "class path resource [templates//permission/permission-add.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//permission/permission-add.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "sysPermission.id" (template: "/permission/permission-add" - line 18, col 36)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 51 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "sysPermission.id" (template: "/permission/permission-add" - line 18, col 36)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 53 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 72 common frames omitted
+
+2020-03-30 19:36:29.032 ERROR 8352 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//permission/permission-add.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-30 19:36:45.399  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 19:36:45.402 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 19:36:45.403  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 19:36:45.444  INFO 21736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-30 19:36:45.444  INFO 21736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-30 19:36:46.351  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 19:36:46.356  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 19:36:46.357  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 19:36:46.422  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 19:36:46.423  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 979 ms
+2020-03-30 19:36:46.533  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 19:36:46.815  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-30 19:36:47.102  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 19:36:47.152  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 19:36:47.268  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 19:36:47.313  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 19:36:47.315  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 2.503 seconds (JVM running for 3.392)
+2020-03-30 19:37:19.335  INFO 21736 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585386165,1585444080,1585537868; JSESSIONID=CFBBA24B7BD5E22F7BA77EE95068732C; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585568184] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-03-30 19:37:19.343  INFO 21736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 19:37:19.343  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 19:37:19.348  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-03-30 19:37:20.507 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:37:20.507 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 19:37:20.534 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:37:20.534 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:37:20.544 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:37:20.544 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:37:20.552 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:37:20.552 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 19:37:20.558 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:37:20.559 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 19:37:20.559 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:37:20.559 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 19:37:20.562 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 19:37:20.562 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:37:20.567 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:37:20.570 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:37:20.571 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:37:20.574 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:37:20.642 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:37:20.643 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:37:20.644 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:37:20.645 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:37:20.645 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:37:20.656 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:37:20.658 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:37:20.658 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:37:20.658 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:37:23.331 ERROR 21736 --- [http-nio-8080-exec-9] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-9] Exception processing template "/permission/permission-add": An error happened during template parsing (template: "class path resource [templates//permission/permission-add.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//permission/permission-add.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "sysPermission.id" (template: "/permission/permission-add" - line 18, col 36)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 51 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "sysPermission.id" (template: "/permission/permission-add" - line 18, col 36)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:290)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 53 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	... 72 common frames omitted
+
+2020-03-30 19:37:23.334 ERROR 21736 --- [http-nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//permission/permission-add.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'id' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:263)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleStandaloneElement(ProcessorTemplateHandler.java:918)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleStandaloneElementEnd(TemplateHandlerAdapterMarkupHandler.java:260)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:256)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleStandaloneElementEnd(OutputExpressionInlinePreProcessorHandler.java:169)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleStandaloneElementEnd(InlinedOutputExpressionMarkupHandler.java:104)
+	at org.attoparser.HtmlVoidElement.handleOpenElementEnd(HtmlVoidElement.java:92)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-03-30 19:38:31.646 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:38:31.646 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:38:31.649 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:38:31.650 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:38:31.650 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:38:31.658 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:38:31.661 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:38:31.661 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:38:31.662 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:38:31.701 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:38:31.702 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:38:31.707 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:38:31.720 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 19:38:31.721 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:38:31.723 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 19:38:31.724 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 19:38:31.725 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 19:38:31.726 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 19:38:31.741 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:38:31.741 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:38:31.744 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:38:31.745 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:38:31.745 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:38:31.751 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:38:31.756 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:38:31.759 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:38:31.760 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:38:51.061 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:38:51.061 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:38:51.063 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:38:51.064 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:38:51.064 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:38:51.072 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:38:51.075 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:38:51.075 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:38:51.076 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:38:51.087 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:38:51.087 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:38:51.091 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:39:07.519 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:39:07.519 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:39:07.521 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:39:07.522 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:39:07.522 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:39:07.528 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:39:07.531 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:39:07.531 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:39:07.532 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:39:07.544 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:39:07.544 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:39:07.550 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:39:18.382 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:39:18.382 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:39:18.384 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:39:18.385 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:39:18.386 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:39:18.391 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:39:18.393 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:39:18.394 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:39:18.395 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:39:18.431 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:39:18.432 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:39:18.434 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:41:47.018 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:41:47.018 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:41:47.021 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:41:47.022 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:41:47.022 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:41:47.029 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:41:47.030 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:41:47.031 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:41:47.031 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:41:47.042 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:41:47.042 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:41:47.044 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:42:14.843 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:42:14.843 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:42:14.846 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:42:14.847 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:42:14.847 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:42:14.854 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:42:14.856 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:42:14.856 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:42:14.857 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:42:14.906 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:42:14.907 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:42:14.910 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:42:16.474 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:42:16.475 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:42:16.476 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:42:32.476 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:42:32.476 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:42:32.479 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:42:32.480 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:42:32.481 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:42:32.487 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:42:32.489 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:42:32.489 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:42:32.490 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:42:32.560 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:42:32.560 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:42:32.563 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:42:33.752 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:42:33.752 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:42:33.753 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:43:09.805 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:43:09.805 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:43:09.808 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:43:09.808 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:43:09.808 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:43:09.814 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:43:09.817 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:43:09.817 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:43:09.818 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:43:09.864 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:43:09.864 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:43:09.865 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:43:11.415 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:43:11.415 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:43:11.416 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:45:03.545 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:45:03.545 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:45:03.546 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:48:32.341 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:48:32.341 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:48:32.344 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:48:32.345 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:48:32.345 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:48:32.350 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:48:32.352 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:48:32.352 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:48:32.353 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:48:32.387 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:48:32.387 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:48:32.389 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:48:44.479 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:48:44.479 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:48:44.480 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:48:44.481 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:48:44.481 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:48:44.483 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:48:44.485 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:48:44.485 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:48:44.486 DEBUG 21736 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:49:33.581 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:49:33.581 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:49:33.583 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:49:33.584 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:49:33.584 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:49:33.589 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:49:33.592 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:49:33.592 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:49:33.593 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:49:33.629 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:49:33.629 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:49:33.631 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:49:33.670 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:49:33.670 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:49:33.672 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:49:33.673 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:49:33.673 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:49:33.677 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:49:33.679 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:49:33.679 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:49:33.680 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:49:37.473 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:49:37.473 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:49:37.477 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:49:37.478 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:49:37.479 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:49:37.484 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:49:37.486 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:49:37.486 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:49:37.486 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:49:37.515 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:49:37.515 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:49:37.517 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:49:37.532 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:49:37.532 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:49:37.535 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:49:37.535 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:49:37.535 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:49:37.538 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:49:37.540 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:49:37.540 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:49:37.541 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:50:13.958 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:50:13.958 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:50:13.960 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:50:13.961 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:50:13.961 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:50:13.966 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:50:13.969 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:50:13.969 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:50:13.970 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:50:14.013 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:50:14.013 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:50:14.016 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:50:14.037 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:50:14.037 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:50:14.039 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:50:14.040 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:50:14.040 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:50:14.043 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:50:14.045 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:50:14.045 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:50:14.046 DEBUG 21736 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:51:08.216 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:51:08.217 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:51:08.219 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:51:09.660 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-03-30 19:51:09.660 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:51:09.661 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-03-30 19:51:09.662 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-03-30 19:51:09.662 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-03-30 19:51:09.663 DEBUG 21736 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-03-30 19:51:27.848 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:51:27.849 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:51:27.853 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:51:27.854 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:51:27.854 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:51:27.857 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:51:27.860 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:51:27.860 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:51:27.860 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:51:29.770 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:51:29.770 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:51:29.771 DEBUG 21736 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:52:27.115 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 19:52:27.115 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 19:52:27.119 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 19:52:27.119 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 19:52:27.119 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 19:52:27.123 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 19:52:27.125 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 19:52:27.126 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 19:52:27.126 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 19:52:27.162 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:52:27.162 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:52:27.164 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:52:28.276 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:52:28.276 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:52:28.277 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 19:53:43.519 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 19:53:43.519 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 19:53:43.521 DEBUG 21736 --- [http-nio-8080-exec-2] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 20:00:49.857  INFO 21736 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:00:49.862  INFO 21736 --- [Thread-10] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-30 20:00:50.483  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:00:50.483 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:00:50.483  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:00:50.927  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:00:50.929  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:00:50.929  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:00:50.973  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:00:50.973  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 486 ms
+2020-03-30 20:00:51.016  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:00:51.079  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-03-30 20:00:51.284  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:00:51.305  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:00:51.365  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:00:51.387  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:00:51.388  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.973 seconds (JVM running for 1447.463)
+2020-03-30 20:00:51.389  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:00:53.831  INFO 21736 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:00:53.833  INFO 21736 --- [Thread-17] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2020-03-30 20:00:54.332  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:00:54.332 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:00:54.332  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:00:54.599  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:00:54.599  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:00:54.599  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:00:54.616  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:00:54.616  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 281 ms
+2020-03-30 20:00:54.649  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:00:54.708  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2020-03-30 20:00:54.848  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:00:54.873  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:00:54.934  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:00:54.955  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:00:54.956  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.663 seconds (JVM running for 1451.032)
+2020-03-30 20:00:54.957  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:00:55.101  INFO 21736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 20:00:55.102  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 20:00:55.106  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-03-30 20:00:55.681 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-03-30 20:00:55.681 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-03-30 20:00:55.684 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-03-30 20:00:55.684 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:00:55.685 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:00:55.685 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-03-30 20:00:55.686 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-03-30 20:00:55.690 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 20:00:55.690 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-03-30 20:00:55.692 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-03-30 20:00:55.693 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-03-30 20:00:55.694 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-03-30 20:00:59.851 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:00:59.851 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:00:59.852 DEBUG 21736 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-03-30 20:01:32.171  WARN 21736 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-03-30 20:01:39.076  WARN 21736 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-03-30 20:02:06.610  INFO 21736 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:02:06.612  INFO 21736 --- [Thread-22] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2020-03-30 20:02:07.170  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 21736 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-03-30 20:02:07.171 DEBUG 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-03-30 20:02:07.171  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-03-30 20:02:07.480  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-30 20:02:07.481  INFO 21736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-30 20:02:07.481  INFO 21736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-30 20:02:07.494  INFO 21736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-30 20:02:07.494  INFO 21736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 320 ms
+2020-03-30 20:02:07.522  INFO 21736 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-03-30 20:02:07.563  INFO 21736 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2020-03-30 20:02:07.739  INFO 21736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-30 20:02:07.761  INFO 21736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-30 20:02:07.830  INFO 21736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-30 20:02:07.863  INFO 21736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-30 20:02:07.863  INFO 21736 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 0.738 seconds (JVM running for 1523.939)
+2020-03-30 20:02:07.864  INFO 21736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-30 20:02:09.877  INFO 21736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-30 20:02:09.878  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-30 20:02:09.880  INFO 21736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-03-30 20:02:09.970 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.insertSelective                : ==>  Preparing: insert into permission ( parent_id, permission_name, css, href, type, permission, sort ) values ( ?, ?, ?, ?, ?, ?, ? ) 
+2020-03-30 20:02:09.972 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.insertSelective                : ==> Parameters: 0(Long), 测试菜单(String), css(String), href(String), 1(Integer), sys:test(String), 1000(Integer)
+2020-03-30 20:02:09.976 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.insertSelective                : <==    Updates: 1
+2020-03-30 20:02:13.962 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:02:13.962 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:02:13.965 DEBUG 21736 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 26
+2020-03-30 20:02:25.161 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:02:25.161 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:02:25.162 DEBUG 21736 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 26
+2020-03-30 20:03:20.349 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.insertSelective                : ==>  Preparing: insert into permission ( parent_id, permission_name, css, href, type, permission, sort ) values ( ?, ?, ?, ?, ?, ?, ? ) 
+2020-03-30 20:03:20.349 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.insertSelective                : ==> Parameters: 26(Long), 测试按钮(String), css(String), href(String), 2(Integer), sys:test:btn(String), 1001(Integer)
+2020-03-30 20:03:20.350 DEBUG 21736 --- [http-nio-8080-exec-8] c.g.m.d.P.insertSelective                : <==    Updates: 1
+2020-03-30 20:03:21.398 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-03-30 20:03:21.398 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-03-30 20:03:21.399 DEBUG 21736 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 27

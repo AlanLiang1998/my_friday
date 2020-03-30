@@ -31,6 +31,17 @@ public class PermissionServiceImpl implements PermissionService {
     private RolePermissionMapper rolePermissionMapper;
 
     @Override
+    public int create(Permission permission) {
+        return permissionMapper.insertSelective(permission);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Permission> queryAll() {
+        return permissionMapper.selectByExample(null);
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public List<Long> listByRoleId(Long roleId) {
         //根据角色ID查出所有权限ID

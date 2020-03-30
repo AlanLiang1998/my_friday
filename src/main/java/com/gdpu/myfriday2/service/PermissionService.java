@@ -1,6 +1,7 @@
 package com.gdpu.myfriday2.service;
 
 import com.alibaba.fastjson.JSONArray;
+import com.gdpu.myfriday2.model.Permission;
 
 import java.util.List;
 
@@ -25,4 +26,19 @@ public interface PermissionService {
      * @return 权限ID列表
      */
     List<Long> listByRoleId(Long roleId);
+
+    /**
+     * 查询所有权限
+     *
+     * @return 权限列表
+     */
+    List<Permission> queryAll();
+
+    /**
+     * 创建权限
+     *
+     * @param permission 新权限
+     * @return 结果
+     */
+    int create(Permission permission);
 }

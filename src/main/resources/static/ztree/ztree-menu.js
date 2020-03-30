@@ -8,11 +8,11 @@ function onlyGetMenuTree() {
 
     $.ajax({
         type: 'get',
-        url: '/permission/listAllPermission',
+        url: '/permission/list',
         contentType: "application/json; charset=utf-8",
         async: false,
-        success: function (ret) {
-            var data = ret.data
+        success: function (result) {
+            var data = result;
             var length = data.length;
             var children = [];
             for (var i = 0; i < length; i++) {

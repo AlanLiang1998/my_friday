@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="x-admin-sm" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head(~{::title})">
+    <title>friday-权限管理</title>
+</head>
+<link rel="stylesheet" href="../static/ztree/zTreeStyle/zTreeStyle.css"
+      th:href="@{/ztree/zTreeStyle/zTreeStyle.css}"/>
+<link rel="stylesheet" href="../static/ztree/demo.css" th:href="@{/ztree/demo.css}"/>
+<script type="text/javascript" src="../static/ztree/jquery.ztree.all-3.5.min.js"
+        th:src="@{/ztree/jquery.ztree.all-3.5.min.js}"></script>
+<script type="text/javascript" src="../static/ztree/ztree-menu.js"
+        th:src="@{/ztree/ztree-menu.js}"></script>
+
+<body>
+<div class="x-body">
+
+    <form class="layui-form">
+        <input type="text" id="id" name="id" style="display:none;" autocomplete="off"
+               class="layui-input">
+        <div class="layui-form-item">
+            <label for="L_name" class="layui-form-label">
+                <span class="x-red">*</span>菜单名
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="L_name" name="permissionName" required=""
+                       lay-verify="name" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                <span class="x-red">*</span>将会成为菜单名
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="L_css" class="layui-form-label">
+                <span class="x-red"></span>样式
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="L_css" name="css" required="" lay-verify="css"
+                       autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="L_name" class="layui-form-label">
+                <span class="x-red"></span>链接
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="L_href" name="href" lay-verify="href"
+                       autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                <span class="x-red"></span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">类型</label>
+            <div class="layui-input-inline">
+                <select id="selectType" name="type" lay-filter="type">
+                    <option value="1">菜单</option>
+                    <option value="2">按钮</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="L_name" class="layui-form-label">
+                <span class="x-red"></span>资源标识
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="L_permission" name="permission"
+                       lay-verify="permission" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+                <span class="x-red"></span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label for="L_name" class="layui-form-label">
+                <span class="x-red">*</span>排序
+            </label>
+            <div class="layui-input-inline">
+                <input type="text" id="L_sort" name="sort" required=""
+                       lay-verify="sort" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid layui-word-aux">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="col-md-2 control-label layui-form-label">上级菜单</label>
+            <div class="col-md-10">
+                <input type="text" id="parentId" name="parentId"
+                       lay-verify="parentId" style="display:none;" autocomplete="off" class="layui-input">
+                <ul id="treeDemo" class="ztree"></ul>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="add" style="background-color: #5FB878">
+                    立即提交
+                </button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    layui.use(['form', 'layer', 'laydate'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer
+            , laydate = layui.laydate;
+
+
+        //自定义验证规则
+        form.verify({
+            name: function (value) {
+                if (value.length < 2) {
+                    return '菜单名至少2个字符';
+                }
+            },
+            sort: function (value) {
+                if (value.length <= 0) {
+                    return '请填写整数排序值';
+                }
+            }
+        });
+
+        //监听提交
+        form.on('submit(add)', function (data) {
+            var permissionIds = getCheckedMenuIds();
+            if (data.field.sort.length <= 0) {
+                layer.msg('请填写排序值');
+            } else if (permissionIds.length <= 0) {
+                layer.msg('请选择对应的上级菜单');
+            } else {
+                data.field.parentId = permissionIds[0];
+                $.ajax({
+                    url: '/permission',
+                    type: "POST",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(data.field),
+                    success: function (result) {
+                        if (result.code == 200) {
+                            layer.alert("保存成功", {icon: 6}, function () {
+                                //关闭当前frame
+                                xadmin.close();
+                                // 可以对父窗口进行刷新
+                                xadmin.father_reload();
+                            });
+                        }
+                    }
+                });
+            }
+            return false;
+        });
+        initSelectType();
+    });
+    $.fn.zTree.init($("#treeDemo"), getSetting(true), onlyGetMenuTree());
+    initRadioCheckTree();
+</script>
+</body>
+</html>
