@@ -31,6 +31,11 @@ public class PermissionServiceImpl implements PermissionService {
     private RolePermissionMapper rolePermissionMapper;
 
     @Override
+    public int delete(Long id) {
+        return permissionMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
     public int update(Permission permission) {
         return permissionMapper.updateByPrimaryKeySelective(permission);
     }

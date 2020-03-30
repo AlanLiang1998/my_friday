@@ -106,4 +106,17 @@ public class PermissionController {
         int result = permissionService.update(permission);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
+
+    /**
+     * 删除指定权限
+     *
+     * @param id 权限ID
+     * @return 删除结果
+     */
+    @ResponseBody
+    @DeleteMapping
+    public ResponseResult<Object> delete(@NotNull @RequestParam("id") Long id) {
+        int result = permissionService.delete(id);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
 }

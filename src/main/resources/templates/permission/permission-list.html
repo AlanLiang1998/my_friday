@@ -116,24 +116,24 @@
         table.on('tool(member)', function (obj) {
             var data = obj.data;
             if (obj.event === 'del') {
-                layer.confirm('真的删除行么', function (index) {
+                layer.confirm('真的删除该行吗？', {icon: 3, title: '提示'}, function (index) {
                     $.ajax({
-                        url: "/permission/delete",
-                        type: "GET",
+                        url: "/permission",
+                        type: "DELETE",
                         data: {id: data.id},
-                        dataType: 'json',
                         success: function (result) {
-                            layer.alert("删除成功", {icon: 1}, function (index1) {
-                                layer.close(index1);
-                                xadmin.father_reload();
-                                //table.reload('table');
-                            });
+                            if (result.code == 200) {
+                                layer.alert("删除成功", {icon: 1}, function (index1) {
+                                    layer.close(index1);
+                                    xadmin.father_reload();
+                                });
+                            }
                         },
                     });
 
                 });
             } else if (obj.event === 'edit') {
-                xadmin.open('编辑菜单信息', '/permission/editPage/?id=' + data.id,500,500);
+                xadmin.open('编辑菜单信息', '/permission/editPage/?id=' + data.id, 500, 500);
             }
         })
         // checkPermission()

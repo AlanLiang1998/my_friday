@@ -57,4 +57,12 @@ public interface PermissionService {
      * @return 更新结果
      */
     int update(Permission permission);
+
+    /**
+     * 删除权限
+     *
+     * @param id 权限ID
+     * @return 删除结果
+     */
+    int delete(Long id);
 }
