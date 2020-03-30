@@ -61,4 +61,20 @@ public interface RoleService {
      * @return 更新结果
      */
     int update(RoleDto roleDto);
+
+    /**
+     * 删除角色
+     *
+     * @param roleId 角色ID
+     * @return 删除结果
+     */
+    int delete(Long roleId);
+
+    /**
+     * 批量删除角色
+     *
+     * @param roleIdList 角色ID列表
+     * @return 删除结果
+     */
+    int deleteBatch(List<Long> roleIdList);
 }

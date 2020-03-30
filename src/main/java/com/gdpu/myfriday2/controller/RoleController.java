@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.HashMap;
@@ -108,6 +109,32 @@ public class RoleController {
     public ResponseResult<Object> update(@Validated @RequestBody RoleDto roleDto) {
         roleDto.setUpdateTime(new Date());
         int result = roleService.update(roleDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 删除角色
+     *
+     * @param roleId 角色ID
+     * @return 删除结果
+     */
+    @ResponseBody
+    @DeleteMapping
+    public ResponseResult<Object> delete(@NotNull @RequestParam("roleId") Long roleId) {
+        int result = roleService.delete(roleId);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 批量删除角色
+     *
+     * @param roleIdList 角色ID列表
+     * @return 删除结果
+     */
+    @ResponseBody
+    @DeleteMapping("/list")
+    public ResponseResult<Object> deleteBatch(@NotEmpty @RequestBody List<Long> roleIdList) {
+        int result = roleService.deleteBatch(roleIdList);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 }

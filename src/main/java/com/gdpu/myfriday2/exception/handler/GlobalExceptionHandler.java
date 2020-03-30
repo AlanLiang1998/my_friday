@@ -1,5 +1,6 @@
 package com.gdpu.myfriday2.exception.handler;
 
+import com.gdpu.myfriday2.exception.AssociationExistException;
 import com.gdpu.myfriday2.exception.EntityExistException;
 import com.gdpu.myfriday2.utils.ThrowableUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -26,6 +27,16 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(value = EntityExistException.class)
     public ResponseEntity<ApiError> entityExistException(EntityExistException e) {
+        // 打印堆栈信息
+        log.error(ThrowableUtil.getStackTrace(e));
+        return buildResponseEntity(ApiError.error(e.getMessage()));
+    }
+
+    /**
+     * 处理 AssociationExistException
+     */
+    @ExceptionHandler(value = AssociationExistException.class)
+    public ResponseEntity<ApiError> associationExistException(AssociationExistException e) {
         // 打印堆栈信息
         log.error(ThrowableUtil.getStackTrace(e));
         return buildResponseEntity(ApiError.error(e.getMessage()));

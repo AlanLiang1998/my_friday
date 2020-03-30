@@ -2,8 +2,10 @@ package com.gdpu.myfriday2.service.impl;
 
 import com.gdpu.myfriday2.dao.RoleMapper;
 import com.gdpu.myfriday2.dao.RolePermissionMapper;
+import com.gdpu.myfriday2.dao.RoleUserMapper;
 import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.RoleDto;
+import com.gdpu.myfriday2.exception.AssociationExistException;
 import com.gdpu.myfriday2.exception.EntityExistException;
 import com.gdpu.myfriday2.model.*;
 import com.gdpu.myfriday2.service.RoleService;
@@ -31,6 +33,8 @@ public class RoleServiceImpl implements RoleService {
     private RoleMapper roleMapper;
     @Autowired
     private RolePermissionMapper rolePermissionMapper;
+    @Autowired
+    private RoleUserMapper roleUserMapper;
 
     @Override
     @Transactional(readOnly = true)
@@ -42,6 +46,29 @@ public class RoleServiceImpl implements RoleService {
     @Transactional(readOnly = true)
     public Role queryById(Long roleId) {
         return roleMapper.selectByPrimaryKey(roleId);
+    }
+
+    @Override
+    public int deleteBatch(List<Long> roleIdList) {
+        for (Long roleId : roleIdList) {
+            delete(roleId);
+        }
+        return 1;
+    }
+
+    @Override
+    public int delete(Long roleId) {
+        //如果角色有关联用户则不允许删除
+        RoleUserExample roleUserExample = new RoleUserExample();
+        roleUserExample.createCriteria().andRoleIdEqualTo(roleId);
+        List<RoleUserKey> roleUserKeys = roleUserMapper.selectByExample(roleUserExample);
+        if (!CollectionUtils.isEmpty(roleUserKeys)) {
+            Role role = roleMapper.selectByPrimaryKey(roleId);
+            throw new AssociationExistException("角色:" + role.getRoleName() + "已有关联用户,不能删除!");
+        }
+        //删除角色
+        return roleMapper.deleteByPrimaryKey(roleId);
+
     }
 
     @Override
