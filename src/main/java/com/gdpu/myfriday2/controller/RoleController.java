@@ -2,18 +2,18 @@ package com.gdpu.myfriday2.controller;
 
 import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.RoleDto;
-import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.model.Role;
-import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.service.RoleService;
 import com.gdpu.myfriday2.utils.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -62,9 +62,9 @@ public class RoleController {
     }
 
     /**
-     * 跳转至添加用户页面
+     * 跳转至添加角色页面
      *
-     * @return 添加用户页面
+     * @return 添加角色页面
      */
     @GetMapping("/addPage")
     public String addPage() {
@@ -83,6 +83,31 @@ public class RoleController {
         roleDto.setCreateTime(new Date());
         roleDto.setUpdateTime(new Date());
         int result = roleService.create(roleDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    /**
+     * 跳转至编辑角色页面
+     *
+     * @return 编辑角色页面
+     */
+    @GetMapping("/editPage")
+    public String editPage(@NotNull @RequestParam("roleId") Long roleId, Model model) {
+        model.addAttribute("role", roleService.queryById(roleId));
+        return "role/role-edit";
+    }
+
+    /**
+     * 更新角色
+     *
+     * @param roleDto 角色DTO
+     * @return 更新结果
+     */
+    @ResponseBody
+    @PutMapping
+    public ResponseResult<Object> update(@Validated @RequestBody RoleDto roleDto) {
+        roleDto.setUpdateTime(new Date());
+        int result = roleService.update(roleDto);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 }

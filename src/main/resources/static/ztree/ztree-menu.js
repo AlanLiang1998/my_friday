@@ -57,18 +57,12 @@ function getMenuTree() {
     return root;
 }
 
-function initMenuDatas(roleId) {
+function initMenuData(roleId) {
     $.ajax({
         type: 'get',
-        url: '/permission/listAllPermissionByRoleId?id=' + roleId,
-        success: function (ret) {
-            var data = ret.datas;
-            var length = data.length;
-            var ids = [];
-            for (var i = 0; i < length; i++) {
-                ids.push(data[i]['id']);
-            }
-            initMenuCheck(ids);
+        url: '/permission/list/roleId/' + roleId,
+        success: function (result) {
+            initMenuCheck(result);
         }
     });
 }

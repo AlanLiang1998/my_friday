@@ -45,4 +45,20 @@ public interface RoleService {
      * @return 创建结果
      */
     int create(RoleDto roleDto);
+
+    /**
+     * 根据角色ID查询角色
+     *
+     * @param roleId 角色ID
+     * @return 角色
+     */
+    Role queryById(Long roleId);
+
+    /**
+     * 更新角色
+     *
+     * @param roleDto 角色DTO
+     * @return 更新结果
+     */
+    int update(RoleDto roleDto);
 }

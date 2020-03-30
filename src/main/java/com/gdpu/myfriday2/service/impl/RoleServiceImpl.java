@@ -15,6 +15,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @Descriptin TODO
@@ -35,6 +36,43 @@ public class RoleServiceImpl implements RoleService {
     @Transactional(readOnly = true)
     public List<Role> queryAll() {
         return roleMapper.selectByExample(null);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Role queryById(Long roleId) {
+        return roleMapper.selectByPrimaryKey(roleId);
+    }
+
+    @Override
+    public int update(RoleDto roleDto) {
+        //验证角色名是否唯一
+        RoleExample roleExample = new RoleExample();
+        roleExample.createCriteria().andRoleNameEqualTo(roleDto.getRoleName());
+        List<Role> roles = roleMapper.selectByExample(roleExample);
+        roles = roles.stream().filter(r -> !r.getRoleId().equals(roleDto.getRoleId())).collect(Collectors.toList());
+        if (!CollectionUtils.isEmpty(roles)) {
+            throw new EntityExistException("角色名:" + roleDto.getRoleName() + " 已存在");
+        }
+        //先更新角色
+        int result1 = roleMapper.updateByPrimaryKeySelective(roleDto);
+        if (result1 == 0) {
+            return 0;
+        }
+        //移除根节点
+        if (!CollectionUtils.isEmpty(roleDto.getPermissionIds())) {
+            roleDto.getPermissionIds().remove(0);
+        }
+        //然后删除角色原有权限
+        RolePermissionExample rolePermissionExample = new RolePermissionExample();
+        rolePermissionExample.createCriteria().andRoleIdEqualTo(roleDto.getRoleId());
+        rolePermissionMapper.deleteByExample(rolePermissionExample);
+        //最后添加新权限
+        int result2 = rolePermissionMapper.insertBatch(roleDto.getRoleId(), roleDto.getPermissionIds());
+        if (result2 != roleDto.getPermissionIds().size()) {
+            return 0;
+        }
+        return 1;
     }
 
     @Override
