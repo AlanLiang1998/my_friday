@@ -121,8 +121,4 @@ class Myfriday2ApplicationTests {
         rolePermissionMapper.insertBatch(1L, permissionIds);
     }
 
-    @Test
-    void testRoleCreate() {
-
-    }
 }
