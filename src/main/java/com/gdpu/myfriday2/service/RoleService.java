@@ -1,6 +1,7 @@
 package com.gdpu.myfriday2.service;
 
 import com.gdpu.myfriday2.dto.KeywordDto;
+import com.gdpu.myfriday2.dto.RoleDto;
 import com.gdpu.myfriday2.model.Role;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public interface RoleService {
 
     /**
      * 查询角色数量
+     *
      * @return
      */
     long countAll();
@@ -35,4 +37,12 @@ public interface RoleService {
      * @return 角色数量
      */
     long countAllByKeyword(KeywordDto keywordDto);
+
+    /**
+     * 创建角色
+     *
+     * @param roleDto 角色DTO
+     * @return 创建结果
+     */
+    int create(RoleDto roleDto);
 }

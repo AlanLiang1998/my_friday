@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 public class Role {
     private Long roleId;
-    @NotBlank(message = "用户名不能为空")
+    @NotBlank(message = "角色名不能为空")
     private String roleName;
 
     private String description;

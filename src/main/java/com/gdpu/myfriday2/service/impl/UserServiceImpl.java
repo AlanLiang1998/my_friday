@@ -49,8 +49,7 @@ public class UserServiceImpl implements UserService {
         PageHelper.startPage(pageDto.getPage(), pageDto.getLimit());
         UserExample userExample = new UserExample();
         userExample.setOrderByClause("user_id");
-        List<User> users = userMapper.selectWithRoleByExample(userExample);
-        return users;
+        return userMapper.selectWithRoleByExample(userExample);
     }
 
     /**

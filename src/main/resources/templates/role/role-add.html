@@ -22,6 +22,13 @@
 <head th:replace="fragments :: head(~{::title})">
     <title>friday-添加角色</title>
 </head>
+<link rel="stylesheet" href="../static/ztree/zTreeStyle/zTreeStyle.css"
+      th:href="@{/ztree/zTreeStyle/zTreeStyle.css}"/>
+<link rel="stylesheet" href="../static/ztree/demo.css" th:href="@{/ztree/demo.css}"/>
+<script type="text/javascript" src="../static/ztree/jquery.ztree.all-3.5.min.js"
+        th:src="@{/ztree/jquery.ztree.all-3.5.min.js}"></script>
+<script type="text/javascript" src="../static/ztree/ztree-menu.js"
+        th:src="@{/ztree/ztree-menu.js}"></script>
 <body>
 <div class="layui-fluid">
     <div class="layui-row">
@@ -36,15 +43,23 @@
                 </div>
             </div>
             <div class="layui-form-item">
-                <label for="nickname" class="layui-form-label">描述</label>
+                <label for="description" class="layui-form-label">描述</label>
                 <div class="layui-input-inline">
-                    <input type="text" id="nickname" name="nickname" required=""
+                    <input type="text" id="description" name="description" required="" lay-verify="description"
                            autocomplete="off" class="layui-input">
                 </div>
+                <div class="layui-form-mid layui-word-aux">
+                    该角色的定位或权限范围
+                </div>
             </div>
-
-            <div id="test1"></div>
-
+            <div class="layui-form-item">
+                <label class="col-md-2 control-label layui-form-label">
+                    <span class="x-red">*</span>权限
+                </label>
+                <div class="col-md-10">
+                    <ul id="treeDemo" class="ztree"></ul>
+                </div>
+            </div>
             <div class="layui-form-item">
                 <div class="layui-input-block">
                     <button class="layui-btn" lay-submit lay-filter="add" style="background-color: #5FB878">
@@ -57,13 +72,11 @@
     </div>
 </div>
 <script>
-    layui.use(["tree", 'form', 'layer'],
+    layui.use(['form', 'layer'],
         function () {
             $ = layui.jquery;
             var form = layui.form,
-                layer = layui.layer,
-                tree = layui.tree;
-
+                layer = layui.layer;
             //自定义验证规则
             form.verify({
                 //验证角色名
@@ -84,18 +97,26 @@
             });
             //监听提交
             form.on('submit(add)', function (data) {
+                var permissionIds = getCheckedMenuIds();
+                data.field.permissionIds = permissionIds;
                 //发异步，把数据提交给后台
                 $.ajax({
                     url: '/role',
                     type: 'POST',
-                    data: data.field,
+                    data: JSON.stringify(data.field),
+                    contentType: 'application/json',
                     success: function (result) {
-                        layer.alert("添加成功", {icon: 6}, function () {
-                            //关闭当前frame
-                            xadmin.close();
-                            // 可以对父窗口进行刷新
-                            xadmin.father_reload();
-                        });
+                        if (result.code == 200) {
+                            layer.alert("添加成功", {icon: 6}, function () {
+                                //关闭当前frame
+                                xadmin.close();
+                                // 可以对父窗口进行刷新
+                                xadmin.father_reload();
+                            });
+                        } else {
+                            lay.msg("添加失败", {icon: 5});
+                        }
+
                     },
                     error: function (result) {
                         let error = JSON.parse(result.responseText);
@@ -105,27 +126,10 @@
 
                 return false;
             });
-
-            //渲染
-            var inst1 = tree.render({
-                elem: '#test1'  //绑定元素
-                , data: [{
-                    title: '江西' //一级菜单
-                    , children: [{
-                        title: '南昌' //二级菜单
-                        , children: [{
-                            title: '高新区' //三级菜单
-                            //…… //以此类推，可无限层级
-                        }]
-                    }]
-                }, {
-                    title: '陕西' //一级菜单
-                    , children: [{
-                        title: '西安' //二级菜单
-                    }]
-                }]
-            });
+            //初始化zTree,第一个参数接收树形组件所在的ul元素ID，第二个参数接收配置项，第三个参数接收后台传来的json形式的菜单树
+            $.fn.zTree.init($("#treeDemo"), getSetting(), getMenuTree());
         });
+
 </script>
 <script>
     var _hmt = _hmt || [];

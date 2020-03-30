@@ -1,9 +1,14 @@
 package com.gdpu.myfriday2;
 
+import com.alibaba.fastjson.JSONArray;
+import com.gdpu.myfriday2.dao.PermissionMapper;
+import com.gdpu.myfriday2.dao.RolePermissionMapper;
 import com.gdpu.myfriday2.dao.RoleUserMapper;
 import com.gdpu.myfriday2.dao.UserMapper;
+import com.gdpu.myfriday2.model.Permission;
 import com.gdpu.myfriday2.model.RoleUserKey;
 import com.gdpu.myfriday2.model.User;
+import com.gdpu.myfriday2.utils.PermissionTreeUtil;
 import org.junit.jupiter.api.Test;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
@@ -90,6 +95,34 @@ class Myfriday2ApplicationTests {
             roleUserKey.setRoleId(2L);
             roleUserMapper.insert(roleUserKey);
         }
+
+    }
+
+    @Autowired
+    private PermissionMapper permissionMapper;
+
+    @Test
+    void testPermissionTreeUtil() {
+        List<Permission> permissions = permissionMapper.selectByExample(null);
+        JSONArray array = new JSONArray();
+        PermissionTreeUtil.getPermissionTree(0, permissions, array);
+        System.out.println(array);
+    }
+
+    @Autowired
+    private RolePermissionMapper rolePermissionMapper;
+
+    @Test
+    void testRolePermissionInsertBatch() {
+        List<Long> permissionIds = new ArrayList<>();
+        for (long i = 1; i <= 25; i++) {
+            permissionIds.add(i);
+        }
+        rolePermissionMapper.insertBatch(1L, permissionIds);
+    }
+
+    @Test
+    void testRoleCreate() {
 
     }
 }
