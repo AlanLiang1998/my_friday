@@ -2,7 +2,6 @@ package com.gdpu.myfriday2.config;
 
 import com.gdpu.myfriday2.security.MyAuthenticationFailureHandler;
 import com.gdpu.myfriday2.security.MyAuthenticationSuccessHandler;
-import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -47,8 +46,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        //禁用拦截除GET方式以外的请求
-        http.csrf().disable();
         //开启登录配置
         http.authorizeRequests()
                 //放行访问登录页面和静态资源的请求
@@ -66,5 +63,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .successHandler(myAuthenticationSuccessHandler)
                 //认证失败处理
                 .failureHandler(myAuthenticationFailureHandler);
+
+        //自定义退出登录
+        http.logout().permitAll()
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
+                .logoutSuccessUrl("/login.html");
+
+        //禁用拦截除GET方式以外的请求
+        http.csrf().disable();
     }
 }

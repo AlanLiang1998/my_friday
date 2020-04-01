@@ -44,6 +44,9 @@ public class UserDetailServiceImpl implements UserDetailsService {
         UserExample userExample = new UserExample();
         userExample.createCriteria().andUsernameEqualTo(username);
         List<User> users = userMapper.selectByExample(userExample);
+        if (CollectionUtils.isEmpty(users)) {
+            throw new UsernameNotFoundException("用户名不存在");
+        }
         if (users.size() != 1) {
             return null;
         }

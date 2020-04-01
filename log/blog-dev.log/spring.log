@@ -5054,3 +5054,347 @@ org.springframework.security.authentication.InternalAuthenticationServiceExcepti
 2020-04-01 13:15:35.515  INFO 13780 --- [http-nio-8080-exec-1] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
 2020-04-01 13:15:47.825  INFO 13780 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2020-04-01 13:15:47.829  INFO 13780 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-04-01 13:16:35.714  INFO 14892 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 14892 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-04-01 13:16:35.717 DEBUG 14892 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-01 13:16:35.717  INFO 14892 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-04-01 13:16:35.770  INFO 14892 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-01 13:16:35.770  INFO 14892 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-01 13:16:36.673  INFO 14892 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:16:36.689  INFO 14892 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:16:36.691  INFO 14892 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2c0b4320' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:16:36.692  INFO 14892 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:16:36.695  INFO 14892 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:16:36.896  INFO 14892 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-01 13:16:36.903  INFO 14892 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-01 13:16:36.904  INFO 14892 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-01 13:16:36.975  INFO 14892 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-01 13:16:36.976  INFO 14892 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1205 ms
+2020-04-01 13:16:37.228  INFO 14892 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-04-01 13:16:37.478  INFO 14892 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-01 13:16:37.946  INFO 14892 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-01 13:16:38.063  INFO 14892 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4056650d, org.springframework.security.web.context.SecurityContextPersistenceFilter@71da9bc, org.springframework.security.web.header.HeaderWriterFilter@1fc73d26, org.springframework.security.web.authentication.logout.LogoutFilter@514a0015, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7a3e4c7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4db9f62a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e5ee990, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3bac9237, org.springframework.security.web.session.SessionManagementFilter@63bc4818, org.springframework.security.web.access.ExceptionTranslationFilter@751b6b34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@69b535c0]
+2020-04-01 13:16:38.111  INFO 14892 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-01 13:16:38.146  INFO 14892 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-01 13:16:38.173  INFO 14892 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-01 13:16:38.318  INFO 14892 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-01 13:16:38.329  INFO 14892 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-01 13:16:38.361  INFO 14892 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-01 13:16:38.487  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_1
+2020-04-01 13:16:38.492  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-04-01 13:16:38.493  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-04-01 13:16:38.496  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_1
+2020-04-01 13:16:38.496  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-04-01 13:16:38.500  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-04-01 13:16:38.502  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_2
+2020-04-01 13:16:38.507  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2020-04-01 13:16:38.509  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-04-01 13:16:38.509  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBatchUsingDELETE_1
+2020-04-01 13:16:38.511  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_2
+2020-04-01 13:16:38.515  INFO 14892 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-04-01 13:16:38.543  INFO 14892 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-01 13:16:38.546  INFO 14892 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 3.467 seconds (JVM running for 4.365)
+2020-04-01 13:16:59.327  INFO 14892 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585537868,1585659726,1585710853; JSESSIONID=8B5497B2D845799A37BD577149E2CD37; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585717934] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-04-01 13:16:59.331  INFO 14892 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-01 13:16:59.331  INFO 14892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-01 13:16:59.337  INFO 14892 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-01 13:16:59.469 DEBUG 14892 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:16:59.577 DEBUG 14892 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-01 13:16:59.590 DEBUG 14892 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-01 13:16:59.599 DEBUG 14892 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-01 13:16:59.603 DEBUG 14892 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-01 13:16:59.610 DEBUG 14892 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-01 13:16:59.692  INFO 14892 --- [http-nio-8080-exec-1] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-01 13:52:42.655 DEBUG 14892 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:52:42.656 DEBUG 14892 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: adimin(String)
+2020-04-01 13:52:42.658 DEBUG 14892 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 0
+2020-04-01 13:52:42.660 ERROR 14892 --- [http-nio-8080-exec-8] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: UserDetailsService returned null, which is an interface contract violation
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:110)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-01 13:52:42.661  INFO 14892 --- [http-nio-8080-exec-8] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
+2020-04-01 13:52:46.346 DEBUG 14892 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:52:46.347 DEBUG 14892 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: adimin(String)
+2020-04-01 13:52:46.348 DEBUG 14892 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 0
+2020-04-01 13:52:46.349 ERROR 14892 --- [http-nio-8080-exec-6] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: UserDetailsService returned null, which is an interface contract violation
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:110)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-01 13:52:46.350  INFO 14892 --- [http-nio-8080-exec-6] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
+2020-04-01 13:53:07.125 DEBUG 14892 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:53:07.126 DEBUG 14892 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-01 13:53:07.127 DEBUG 14892 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-01 13:53:07.128 DEBUG 14892 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-01 13:53:07.128 DEBUG 14892 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-01 13:53:07.133 DEBUG 14892 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-01 13:53:07.216  INFO 14892 --- [http-nio-8080-exec-7] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-01 13:53:13.443 DEBUG 14892 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:53:13.444 DEBUG 14892 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin1(String)
+2020-04-01 13:53:13.445 DEBUG 14892 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 0
+2020-04-01 13:53:13.446 ERROR 14892 --- [http-nio-8080-exec-3] w.a.UsernamePasswordAuthenticationFilter : An internal error occurred while trying to authenticate the user.
+
+org.springframework.security.authentication.InternalAuthenticationServiceException: UserDetailsService returned null, which is an interface contract violation
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:110)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-04-01 13:53:13.446  INFO 14892 --- [http-nio-8080-exec-3] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
+2020-04-01 13:55:32.048  INFO 11988 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 11988 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-04-01 13:55:32.052 DEBUG 11988 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-01 13:55:32.053  INFO 11988 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-04-01 13:55:32.119  INFO 11988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-01 13:55:32.120  INFO 11988 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-01 13:55:33.609  INFO 11988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:55:33.629  INFO 11988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:55:33.631  INFO 11988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7eda3d36' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:55:33.632  INFO 11988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:55:33.635  INFO 11988 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 13:55:33.967  INFO 11988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-01 13:55:33.984  INFO 11988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-01 13:55:33.985  INFO 11988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-01 13:55:34.106  INFO 11988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-01 13:55:34.106  INFO 11988 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1986 ms
+2020-04-01 13:55:35.669  INFO 11988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-04-01 13:55:36.136  INFO 11988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-01 13:55:36.672  INFO 11988 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-01 13:55:36.805  INFO 11988 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@248b977, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ae57e1, org.springframework.security.web.header.HeaderWriterFilter@5d25edcc, org.springframework.security.web.authentication.logout.LogoutFilter@719f9b5b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58302edf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b11534a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3fca626c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5059c4fd, org.springframework.security.web.session.SessionManagementFilter@493def92, org.springframework.security.web.access.ExceptionTranslationFilter@a7a740, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a9a9b54]
+2020-04-01 13:55:36.849  INFO 11988 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-01 13:55:36.886  INFO 11988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-01 13:55:36.913  INFO 11988 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-01 13:55:37.052  INFO 11988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-01 13:55:37.065  INFO 11988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-01 13:55:37.107  INFO 11988 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-01 13:55:37.243  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_1
+2020-04-01 13:55:37.249  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-04-01 13:55:37.251  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-04-01 13:55:37.253  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_1
+2020-04-01 13:55:37.254  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-04-01 13:55:37.259  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-04-01 13:55:37.262  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_2
+2020-04-01 13:55:37.270  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2020-04-01 13:55:37.271  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-04-01 13:55:37.272  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBatchUsingDELETE_1
+2020-04-01 13:55:37.273  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_2
+2020-04-01 13:55:37.278  INFO 11988 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-04-01 13:55:37.310  INFO 11988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-01 13:55:37.314  INFO 11988 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 5.929 seconds (JVM running for 6.825)
+2020-04-01 13:55:45.106  INFO 11988 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585537868,1585659726,1585710853; JSESSIONID=3CC8F3B501A5369F9A604D9C84024247; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585720389] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-04-01 13:55:45.110  INFO 11988 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-01 13:55:45.110  INFO 11988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-01 13:55:45.115  INFO 11988 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-01 13:55:45.250 DEBUG 11988 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:55:45.332 DEBUG 11988 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin1(String)
+2020-04-01 13:55:45.342 DEBUG 11988 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 0
+2020-04-01 13:55:45.424  INFO 11988 --- [http-nio-8080-exec-1] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
+2020-04-01 13:56:02.530 DEBUG 11988 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 13:56:02.530 DEBUG 11988 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-01 13:56:02.533 DEBUG 11988 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-01 13:56:02.541 DEBUG 11988 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-01 13:56:02.545 DEBUG 11988 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-01 13:56:02.552 DEBUG 11988 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-01 13:56:02.647  INFO 11988 --- [http-nio-8080-exec-2] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-01 14:04:53.253  INFO 12608 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 12608 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-04-01 14:04:53.256 DEBUG 12608 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-01 14:04:53.256  INFO 12608 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-04-01 14:04:53.308  INFO 12608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-01 14:04:53.308  INFO 12608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-01 14:04:54.273  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 14:04:54.289  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 14:04:54.290  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@63c31082' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 14:04:54.292  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 14:04:54.294  INFO 12608 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-01 14:04:54.499  INFO 12608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-01 14:04:54.506  INFO 12608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-01 14:04:54.506  INFO 12608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-01 14:04:54.575  INFO 12608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-01 14:04:54.576  INFO 12608 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1267 ms
+2020-04-01 14:04:54.810  INFO 12608 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-04-01 14:04:55.070  INFO 12608 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-01 14:04:55.545  INFO 12608 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-01 14:04:55.663  INFO 12608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ac7601a, org.springframework.security.web.context.SecurityContextPersistenceFilter@13756f6a, org.springframework.security.web.header.HeaderWriterFilter@da5ebca, org.springframework.security.web.authentication.logout.LogoutFilter@7fe2c586, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fcba10e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7970530, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28a484d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cc4f851, org.springframework.security.web.session.SessionManagementFilter@375bf01b, org.springframework.security.web.access.ExceptionTranslationFilter@6e23dff2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2856bc00]
+2020-04-01 14:04:55.707  INFO 12608 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-01 14:04:55.741  INFO 12608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-01 14:04:55.766  INFO 12608 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-01 14:04:55.909  INFO 12608 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-01 14:04:55.920  INFO 12608 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-01 14:04:55.954  INFO 12608 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-01 14:04:56.085  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_1
+2020-04-01 14:04:56.091  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-04-01 14:04:56.092  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-04-01 14:04:56.095  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_1
+2020-04-01 14:04:56.096  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-04-01 14:04:56.100  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-04-01 14:04:56.103  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_2
+2020-04-01 14:04:56.109  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2020-04-01 14:04:56.110  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-04-01 14:04:56.111  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBatchUsingDELETE_1
+2020-04-01 14:04:56.112  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_2
+2020-04-01 14:04:56.117  INFO 12608 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-04-01 14:04:56.146  INFO 12608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-01 14:04:56.149  INFO 12608 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 3.515 seconds (JVM running for 4.344)
+2020-04-01 14:04:59.865  INFO 12608 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585537868,1585659726,1585710853; JSESSIONID=2FA350ABAB410881E0BEE98AB58D93E6; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585720727] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-04-01 14:04:59.869  INFO 12608 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-01 14:04:59.869  INFO 12608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-01 14:04:59.874  INFO 12608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-04-01 14:05:04.676 DEBUG 12608 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-01 14:05:04.775 DEBUG 12608 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-01 14:05:04.787 DEBUG 12608 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-01 14:05:04.793 DEBUG 12608 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-01 14:05:04.797 DEBUG 12608 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-01 14:05:04.804 DEBUG 12608 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-01 14:05:04.887  INFO 12608 --- [http-nio-8080-exec-7] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功

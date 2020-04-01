@@ -54,7 +54,7 @@
                         if (result.authenticated == true) {
                             localStorage.setItem("userId", result.principal.id);
                             localStorage.setItem("username", result.principal.username);
-                            localStorage.setItem("nickName", result.principal.nickname);
+                            localStorage.setItem("nickname", result.principal.nickname);
                             var authorities = result.authorities;
                             var permission = [];
                             for (var i in authorities) {
