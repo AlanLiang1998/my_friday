@@ -1,8 +1,11 @@
 package com.gdpu.myfriday2.dao;
 
+import com.gdpu.myfriday2.model.Permission;
 import com.gdpu.myfriday2.model.RoleUserExample;
 import com.gdpu.myfriday2.model.RoleUserKey;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -23,4 +26,5 @@ public interface RoleUserMapper {
     int updateByExampleSelective(@Param("record") RoleUserKey record, @Param("example") RoleUserExample example);
 
     int updateByExample(@Param("record") RoleUserKey record, @Param("example") RoleUserExample example);
+
 }

@@ -46,4 +46,10 @@ public class User {
 
     public interface Update {
     }
+
+    public interface Status {
+        int DISABLED = 0;
+        int ENABLED = 1;
+        int LOCKED = -1;
+    }
 }

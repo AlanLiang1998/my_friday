@@ -20,10 +20,10 @@
 
     <dependencies>
         <!--spring security启动器-->
-        <!-- <dependency>
-             <groupId>org.springframework.boot</groupId>
-             <artifactId>spring-boot-starter-security</artifactId>
-         </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <!--thymeleaf模板启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -17,6 +17,7 @@ import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.sql.DataSource;
 import java.io.File;
@@ -121,4 +122,15 @@ class Myfriday2ApplicationTests {
         rolePermissionMapper.insertBatch(1L, permissionIds);
     }
 
+    @Test
+    void testListPermissionByUserId() {
+        List<Permission> permissions = permissionMapper.listByUserId(1);
+        System.out.println(permissions);
+    }
+
+    @Test
+    void testBCrypt() {
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        System.out.println(encoder.encode("123456"));
+    }
 }

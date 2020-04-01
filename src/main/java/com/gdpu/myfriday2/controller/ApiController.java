@@ -20,5 +20,4 @@ public class ApiController {
         mv.setViewName(pageName);
         return mv;
     }
-
 }

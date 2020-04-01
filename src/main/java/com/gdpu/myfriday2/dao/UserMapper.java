@@ -1,5 +1,6 @@
 package com.gdpu.myfriday2.dao;
 
+import com.gdpu.myfriday2.model.Permission;
 import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.model.UserExample;
 
@@ -35,4 +36,5 @@ public interface UserMapper {
     List<User> selectWithRoleByExample(UserExample example);
 
     User selectWithRoleByPrimaryKey(Long userId);
+
 }
