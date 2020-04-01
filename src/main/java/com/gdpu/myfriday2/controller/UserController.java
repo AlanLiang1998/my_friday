@@ -9,6 +9,7 @@ import com.gdpu.myfriday2.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -39,6 +40,7 @@ public class UserController {
      * @param pageDto 分页数据DTO
      * @return 用户列表
      */
+    @PreAuthorize("hasAuthority('sys:user:query')")
     @ResponseBody
     @GetMapping("/list")
     public ResponseResult<Object> getUsers(PageDto pageDto) {
@@ -52,6 +54,7 @@ public class UserController {
      *
      * @return 添加用户页面
      */
+    @PreAuthorize("hasAuthority('sys:user:add')")
     @GetMapping("/addPage")
     public String addPage() {
         return "user/user-add";
@@ -63,6 +66,7 @@ public class UserController {
      * @param userDto 用户DTO
      * @return 新增结果
      */
+    @PreAuthorize("hasAuthority('sys:user:add')")
     @ResponseBody
     @PostMapping
     public ResponseResult<Object> create(@Validated(User.Create.class) UserDto userDto) {
@@ -79,6 +83,7 @@ public class UserController {
      * @param keywordDto 关键词DTO
      * @return 用户列表
      */
+    @PreAuthorize("hasAuthority('sys:user:query')")
     @ResponseBody
     @GetMapping
     public ResponseResult<Object> searchUsersByPage(KeywordDto keywordDto) {
@@ -96,6 +101,7 @@ public class UserController {
      */
     @ResponseBody
     @PutMapping("/state")
+    @PreAuthorize("hasAuthority('sys:user:edit')")
     public ResponseResult<Object> switchState(@NotNull @Param("userId") Long userId) {
         int result = userService.switchState(userId);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
@@ -108,6 +114,7 @@ public class UserController {
      * @param model  model
      * @return 用户编辑页面
      */
+    @PreAuthorize("hasAuthority('sys:user:edit')")
     @GetMapping("/editPage")
     public String editPage(@Param("userId") Long userId, Model model) {
         User user = userService.queryById(userId);
@@ -121,6 +128,7 @@ public class UserController {
      * @param userDto 用户信息
      * @return 更新结果
      */
+    @PreAuthorize("hasAuthority('sys:user:edit')")
     @ResponseBody
     @PutMapping
     public ResponseResult<Object> update(@Validated(User.Update.class) UserDto userDto) {
@@ -135,6 +143,7 @@ public class UserController {
      * @param userId 用户ID
      * @return 删除结果
      */
+    @PreAuthorize("hasAuthority('sys:user:del')")
     @ResponseBody
     @DeleteMapping
     public ResponseResult<Object> delete(@NotNull @RequestParam("userId") Long userId) {
@@ -148,6 +157,7 @@ public class UserController {
      * @param idList 用户ID列表
      * @return 删除结果
      */
+    @PreAuthorize("hasAuthority('sys:user:del')")
     @ResponseBody
     @DeleteMapping("/list")
     public ResponseResult<Object> deleteBatch(@NotEmpty @RequestBody List<Long> idList) {

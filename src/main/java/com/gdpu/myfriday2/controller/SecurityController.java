@@ -15,4 +15,9 @@ public class SecurityController {
     public String login() {
         return "login";
     }
+
+    @GetMapping(value = "/403.html")
+    public String noPermission() {
+        return "error/403";
+    }
 }

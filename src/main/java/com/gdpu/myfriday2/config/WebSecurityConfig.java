@@ -1,5 +1,6 @@
 package com.gdpu.myfriday2.config;
 
+import com.gdpu.myfriday2.security.MyAccessDeniedHandler;
 import com.gdpu.myfriday2.security.MyAuthenticationFailureHandler;
 import com.gdpu.myfriday2.security.MyAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private MyAuthenticationSuccessHandler myAuthenticationSuccessHandler;
     @Autowired
     private MyAuthenticationFailureHandler myAuthenticationFailureHandler;
+    @Autowired
+    private MyAccessDeniedHandler myAccessDeniedHandler;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -70,7 +73,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .deleteCookies("JSESSIONID")
                 .logoutSuccessUrl("/login.html");
 
+        //处理权限异常
+        http.exceptionHandling().accessDeniedHandler(myAccessDeniedHandler);
+
         //禁用拦截除GET方式以外的请求
         http.csrf().disable();
+        //解决X-Frame-Options DENY问题
+        http.headers().frameOptions().sameOrigin();
     }
 }
