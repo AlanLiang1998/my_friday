@@ -8,6 +8,7 @@ import com.gdpu.myfriday2.utils.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -38,6 +39,7 @@ public class RoleController {
      *
      * @return 角色列表
      */
+    @PreAuthorize("hasAuthority('sys:role:query')")
     @GetMapping("/list")
     public ResponseEntity<Object> list() {
         Map<String, Object> map = new HashMap<>();
@@ -54,6 +56,7 @@ public class RoleController {
      * @param keywordDto 关键词DTO
      * @return 角色列表
      */
+    @PreAuthorize("hasAuthority('sys:role:query')")
     @ResponseBody
     @GetMapping
     public ResponseResult<Object> searchRolesByPage(KeywordDto keywordDto) {
@@ -67,6 +70,7 @@ public class RoleController {
      *
      * @return 添加角色页面
      */
+    @PreAuthorize("hasAuthority('sys:role:add')")
     @GetMapping("/addPage")
     public String addPage() {
         return "role/role-add";
@@ -77,7 +81,7 @@ public class RoleController {
      *
      * @param roleDto 角色DTO
      * @return 新增结果
-     */
+     */ @PreAuthorize("hasAuthority('sys:role:add')")
     @ResponseBody
     @PostMapping()
     public ResponseResult<Object> create(@Validated @RequestBody RoleDto roleDto) {
@@ -92,6 +96,7 @@ public class RoleController {
      *
      * @return 编辑角色页面
      */
+    @PreAuthorize("hasAuthority('sys:role:edit')")
     @GetMapping("/editPage")
     public String editPage(@NotNull @RequestParam("roleId") Long roleId, Model model) {
         model.addAttribute("role", roleService.queryById(roleId));
@@ -104,6 +109,7 @@ public class RoleController {
      * @param roleDto 角色DTO
      * @return 更新结果
      */
+    @PreAuthorize("hasAuthority('sys:role:edit')")
     @ResponseBody
     @PutMapping
     public ResponseResult<Object> update(@Validated @RequestBody RoleDto roleDto) {
@@ -118,6 +124,7 @@ public class RoleController {
      * @param roleId 角色ID
      * @return 删除结果
      */
+    @PreAuthorize("hasAuthority('sys:role:del')")
     @ResponseBody
     @DeleteMapping
     public ResponseResult<Object> delete(@NotNull @RequestParam("roleId") Long roleId) {
@@ -131,6 +138,7 @@ public class RoleController {
      * @param roleIdList 角色ID列表
      * @return 删除结果
      */
+    @PreAuthorize("hasAuthority('sys:role:del')")
     @ResponseBody
     @DeleteMapping("/list")
     public ResponseResult<Object> deleteBatch(@NotEmpty @RequestBody List<Long> roleIdList) {

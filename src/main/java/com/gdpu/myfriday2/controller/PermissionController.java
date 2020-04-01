@@ -6,6 +6,7 @@ import com.gdpu.myfriday2.utils.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -32,6 +33,7 @@ public class PermissionController {
      *
      * @return 权限列表
      */
+    @PreAuthorize("hasAuthority('sys:menu:query')")
     @GetMapping("/list")
     public ResponseEntity<Object> list() {
         return new ResponseEntity<>(permissionService.list(), HttpStatus.OK);
@@ -43,6 +45,7 @@ public class PermissionController {
      * @param roleId 角色ID
      * @return 权限ID列表
      */
+    @PreAuthorize("hasAuthority('sys:menu:query')")
     @GetMapping("/list/roleId/{roleId}")
     public ResponseEntity<Object> listByRoleId(@NotNull @PathVariable("roleId") Long roleId) {
         return new ResponseEntity<>(permissionService.listByRoleId(roleId), HttpStatus.OK);
@@ -53,6 +56,7 @@ public class PermissionController {
      *
      * @return 权限列表
      */
+    @PreAuthorize("hasAuthority('sys:menu:query')")
     @ResponseBody
     @GetMapping("/menu")
     public ResponseResult<Object> menu() {
@@ -65,6 +69,7 @@ public class PermissionController {
      *
      * @return 添加权限页面
      */
+    @PreAuthorize("hasAuthority('sys:menu:add')")
     @GetMapping("/addPage")
     public String addPage() {
         return "/permission/permission-add";
@@ -76,6 +81,7 @@ public class PermissionController {
      * @param permission 新权限
      * @return 结果
      */
+    @PreAuthorize("hasAuthority('sys:menu:add')")
     @ResponseBody
     @PostMapping
     public ResponseResult<Object> create(@Validated @RequestBody Permission permission) {
@@ -88,6 +94,7 @@ public class PermissionController {
      *
      * @return 编辑限页面
      */
+    @PreAuthorize("hasAuthority('sys:menu:edit')")
     @GetMapping("/editPage")
     public String editPage(@RequestParam("id") Long id, Model model) {
         model.addAttribute("permission", permissionService.queryById(id));
@@ -100,6 +107,7 @@ public class PermissionController {
      * @param permission 新权限
      * @return 更新结果
      */
+    @PreAuthorize("hasAuthority('sys:menu:edit')")
     @ResponseBody
     @PutMapping
     public ResponseResult<Object> update(@Validated @RequestBody Permission permission) {
@@ -113,6 +121,7 @@ public class PermissionController {
      * @param id 权限ID
      * @return 删除结果
      */
+    @PreAuthorize("hasAuthority('sys:menu:del')")
     @ResponseBody
     @DeleteMapping
     public ResponseResult<Object> delete(@NotNull @RequestParam("id") Long id) {
