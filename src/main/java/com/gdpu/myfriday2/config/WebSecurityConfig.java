@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -65,7 +66,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //认证成功处理
                 .successHandler(myAuthenticationSuccessHandler)
                 //认证失败处理
-                .failureHandler(myAuthenticationFailureHandler);
+                .failureHandler(myAuthenticationFailureHandler)
+                .and()
+                //记住我
+                .rememberMe();
 
         //自定义退出登录
         http.logout().permitAll()

@@ -4649,3 +4649,395 @@ Field error in object 'passDto' on field 'oldPass': rejected value [null]; codes
 2020-04-02 15:22:11.670 DEBUG 17192 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
 2020-04-02 15:22:11.670 DEBUG 17192 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
 2020-04-02 15:22:11.671 DEBUG 17192 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:22:29.723  INFO 23884 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 23884 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-04-02 15:22:29.726 DEBUG 23884 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-02 15:22:29.726  INFO 23884 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-04-02 15:22:29.761  INFO 23884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-02 15:22:29.761  INFO 23884 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-02 15:22:30.684  INFO 23884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:22:30.699  INFO 23884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:22:30.701  INFO 23884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4917ef37' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:22:30.701  INFO 23884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:22:30.704  INFO 23884 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:22:31.005  INFO 23884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-02 15:22:31.017  INFO 23884 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-02 15:22:31.018  INFO 23884 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-02 15:22:31.206  INFO 23884 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-02 15:22:31.206  INFO 23884 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1444 ms
+2020-04-02 15:22:31.580  INFO 23884 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-04-02 15:22:31.958  INFO 23884 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-02 15:22:32.786  INFO 23884 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-02 15:22:32.980  INFO 23884 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@440ffa6b, org.springframework.security.web.context.SecurityContextPersistenceFilter@534109, org.springframework.security.web.header.HeaderWriterFilter@51f76451, org.springframework.security.web.authentication.logout.LogoutFilter@1021ecb9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fc5d36a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d2f1061, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4edbd1e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@739a7ca2, org.springframework.security.web.session.SessionManagementFilter@8d1df06, org.springframework.security.web.access.ExceptionTranslationFilter@149b1deb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@588835c0]
+2020-04-02 15:22:33.056  INFO 23884 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-02 15:22:33.135  INFO 23884 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-02 15:22:33.166  INFO 23884 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-02 15:22:33.348  INFO 23884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-02 15:22:33.378  INFO 23884 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-02 15:22:33.419  INFO 23884 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-02 15:22:33.584  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_1
+2020-04-02 15:22:33.591  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-04-02 15:22:33.593  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-04-02 15:22:33.597  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_1
+2020-04-02 15:22:33.598  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-04-02 15:22:33.602  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-04-02 15:22:33.605  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_2
+2020-04-02 15:22:33.615  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2020-04-02 15:22:33.617  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-04-02 15:22:33.618  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBatchUsingDELETE_1
+2020-04-02 15:22:33.620  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_2
+2020-04-02 15:22:33.625  INFO 23884 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-04-02 15:22:33.663  INFO 23884 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-02 15:22:33.666  INFO 23884 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 4.544 seconds (JVM running for 6.162)
+2020-04-02 15:22:51.172  INFO 23884 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585537868,1585659726,1585710853; JSESSIONID=6F33369EB0B55565DD65D55EAEA09480; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585812132] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-04-02 15:22:51.177  INFO 23884 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-02 15:22:51.177  INFO 23884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-02 15:22:51.181  INFO 23884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-04-02 15:22:58.927 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 15:22:59.017 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 15:22:59.029 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 15:22:59.038 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:22:59.042 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:22:59.048 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:22:59.131  INFO 23884 --- [http-nio-8080-exec-7] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-02 15:23:00.025 DEBUG 23884 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:23:00.025 DEBUG 23884 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:23:00.031 DEBUG 23884 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:23:00.122 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:23:00.122 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:23:00.133 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:23:00.397 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:23:00.399 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:23:00.402 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:23:00.407 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:23:00.410 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:23:00.415 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:23:00.416 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:23:00.417 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:23:00.420 DEBUG 23884 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:23:00.432 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:23:00.432 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:23:00.434 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:23:00.436 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:23:00.437 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:23:00.465 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:23:00.467 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:23:00.468 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:23:00.470 DEBUG 23884 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:28:44.693 DEBUG 23884 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:28:44.694 DEBUG 23884 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:28:44.699 DEBUG 23884 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:28:45.080 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:28:45.080 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:28:45.083 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:28:45.085 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:28:45.085 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:28:45.095 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:28:45.097 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:28:45.097 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:28:45.098 DEBUG 23884 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:28:45.114 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:28:45.115 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:28:45.118 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:28:45.120 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:28:45.121 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:28:45.126 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:28:45.130 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:28:45.130 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:28:45.131 DEBUG 23884 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:36:35.930  INFO 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 4184 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-04-02 15:36:35.933 DEBUG 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-02 15:36:35.933  INFO 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-04-02 15:36:35.976  INFO 4184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-02 15:36:35.976  INFO 4184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-02 15:36:36.866  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:36:36.881  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:36:36.883  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@85c095e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:36:36.885  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:36:36.887  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:36:37.093  INFO 4184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-02 15:36:37.100  INFO 4184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-02 15:36:37.101  INFO 4184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-02 15:36:37.179  INFO 4184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-02 15:36:37.179  INFO 4184 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1203 ms
+2020-04-02 15:36:37.384  INFO 4184 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-04-02 15:36:37.624  INFO 4184 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-04-02 15:36:38.094  INFO 4184 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-02 15:36:38.206  INFO 4184 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d0cad9b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5913d3cc, org.springframework.security.web.header.HeaderWriterFilter@7a3e4eb9, org.springframework.security.web.authentication.logout.LogoutFilter@23ce8a03, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5a0ed8cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@783b1cc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8959e35, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72d9e2a3, org.springframework.security.web.session.SessionManagementFilter@5a6cc410, org.springframework.security.web.access.ExceptionTranslationFilter@78a9afdd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18bab749]
+2020-04-02 15:36:38.247  INFO 4184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-02 15:36:38.282  INFO 4184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-02 15:36:38.307  INFO 4184 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-02 15:36:38.452  INFO 4184 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-02 15:36:38.464  INFO 4184 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-02 15:36:38.497  INFO 4184 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-02 15:36:38.632  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_1
+2020-04-02 15:36:38.638  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-04-02 15:36:38.639  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-04-02 15:36:38.642  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_1
+2020-04-02 15:36:38.643  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-04-02 15:36:38.646  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-04-02 15:36:38.649  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_2
+2020-04-02 15:36:38.658  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2020-04-02 15:36:38.659  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-04-02 15:36:38.660  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBatchUsingDELETE_1
+2020-04-02 15:36:38.662  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_2
+2020-04-02 15:36:38.666  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-04-02 15:36:38.696  INFO 4184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-02 15:36:38.699  INFO 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 3.454 seconds (JVM running for 4.308)
+2020-04-02 15:36:40.433  INFO 4184 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1585537868,1585659726,1585710853; Hm_lpvt_b393d153aeb26b46e9431fabaf0f6190=1585812535; JSESSIONID=E004AC1B1577133EA2DD433599A4B524] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-04-02 15:36:40.441  INFO 4184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-02 15:36:40.442  INFO 4184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-02 15:36:40.453  INFO 4184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-04-02 15:59:16.406  INFO 4184 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-02 15:59:16.413  INFO 4184 --- [Thread-10] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-04-02 15:59:17.007  INFO 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Starting Myfriday2Application on DESKTOP-QNDK7AF with PID 4184 (D:\idea\myfriday2\target\classes started by AlanLiang in D:\idea\myfriday2)
+2020-04-02 15:59:17.008 DEBUG 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-04-02 15:59:17.008  INFO 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : The following profiles are active: dev
+2020-04-02 15:59:17.485  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:59:17.494  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:59:17.495  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a6f7d77' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:59:17.497  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:59:17.498  INFO 4184 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-02 15:59:17.593  INFO 4184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-02 15:59:17.593  INFO 4184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-02 15:59:17.593  INFO 4184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-02 15:59:17.607  INFO 4184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-02 15:59:17.607  INFO 4184 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 595 ms
+2020-04-02 15:59:17.664  INFO 4184 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-04-02 15:59:17.748  INFO 4184 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2020-04-02 15:59:18.004  INFO 4184 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-02 15:59:18.051  INFO 4184 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c7cdf58, org.springframework.security.web.context.SecurityContextPersistenceFilter@5dd7193b, org.springframework.security.web.header.HeaderWriterFilter@23b9b481, org.springframework.security.web.authentication.logout.LogoutFilter@5f37383e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ad07692, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7031017a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ec2be41, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2a0cda65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45515ca3, org.springframework.security.web.session.SessionManagementFilter@2bd1ff73, org.springframework.security.web.access.ExceptionTranslationFilter@7f4a5033, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c6bbd4f]
+2020-04-02 15:59:18.077  INFO 4184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-02 15:59:18.091  INFO 4184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-02 15:59:18.108  INFO 4184 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-02 15:59:18.227  INFO 4184 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-04-02 15:59:18.228  INFO 4184 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-04-02 15:59:18.254  INFO 4184 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-04-02 15:59:18.313  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_1
+2020-04-02 15:59:18.316  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_1
+2020-04-02 15:59:18.318  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_1
+2020-04-02 15:59:18.320  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_1
+2020-04-02 15:59:18.321  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: listUsingGET_1
+2020-04-02 15:59:18.325  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2020-04-02 15:59:18.328  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: addPageUsingGET_2
+2020-04-02 15:59:18.335  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: createUsingPOST_2
+2020-04-02 15:59:18.337  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteUsingDELETE_2
+2020-04-02 15:59:18.338  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteBatchUsingDELETE_1
+2020-04-02 15:59:18.339  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: editPageUsingGET_2
+2020-04-02 15:59:18.344  INFO 4184 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2020-04-02 15:59:18.354  INFO 4184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-04-02 15:59:18.355  INFO 4184 --- [restartedMain] com.gdpu.myfriday2.Myfriday2Application  : Started Myfriday2Application in 1.402 seconds (JVM running for 1363.964)
+2020-04-02 15:59:18.358  INFO 4184 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-02 15:59:22.670  INFO 4184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-02 15:59:22.672  INFO 4184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-02 15:59:22.682  INFO 4184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-04-02 15:59:27.874 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 15:59:27.973 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 15:59:27.988 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 15:59:27.994 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:59:27.999 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:59:28.005 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:59:28.081  INFO 4184 --- [http-nio-8080-exec-6] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
+2020-04-02 15:59:30.145 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 15:59:30.145 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 15:59:30.149 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 15:59:30.150 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:59:30.150 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:59:30.155 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:59:30.240  INFO 4184 --- [http-nio-8080-exec-4] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-02 15:59:31.144 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:59:31.144 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:59:31.153 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:59:31.782 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:59:31.785 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:59:31.789 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:59:31.793 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:59:31.798 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:59:31.809 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:59:31.813 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:59:31.815 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:59:31.816 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:59:31.838 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:59:31.838 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:59:31.840 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:59:31.841 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:59:31.841 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:59:31.851 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:59:31.853 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:59:31.853 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:59:31.854 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:59:55.163 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 15:59:55.164 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 15:59:55.165 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 15:59:55.166 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:59:55.166 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:59:55.169 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:59:55.251  INFO 4184 --- [http-nio-8080-exec-9] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-02 15:59:56.093 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 15:59:56.094 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 15:59:56.096 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 15:59:56.682 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:59:56.683 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:59:56.684 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:59:56.685 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:59:56.686 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:59:56.692 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:59:56.695 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:59:56.695 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:59:56.696 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 15:59:56.795 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 15:59:56.796 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 15:59:56.799 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 15:59:56.800 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 15:59:56.800 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 15:59:56.803 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 15:59:56.805 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 15:59:56.805 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 15:59:56.805 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:03.702 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:03.702 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:03.707 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:04.287 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:04.287 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:04.289 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:04.290 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:04.290 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:04.295 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:04.297 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:04.298 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:04.298 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:04.482 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:04.482 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:04.483 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:04.484 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:04.484 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:04.487 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:04.491 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:04.491 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:04.493 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:16.002 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 16:00:16.002 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 16:00:16.003 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 16:00:16.004 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:16.004 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:16.006 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:16.083  INFO 4184 --- [http-nio-8080-exec-7] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-02 16:00:16.911 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:16.911 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:16.915 DEBUG 4184 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:17.308 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:17.308 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:17.316 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:17.317 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:17.317 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:17.322 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:17.324 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:17.324 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:17.325 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:17.370 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:17.371 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:17.374 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:17.377 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:17.377 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:17.386 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:17.390 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:17.390 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:17.391 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:21.322 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:21.322 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:21.324 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:21.827 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:21.827 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:21.830 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:21.830 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:21.831 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:21.835 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:21.837 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:21.837 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:21.838 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:22.047 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:22.047 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:22.048 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:22.050 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:22.050 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:22.056 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:22.059 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:22.059 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:22.060 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:28.160 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:28.160 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:28.162 DEBUG 4184 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:28.640 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:28.640 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:28.642 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:28.643 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:28.643 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:28.647 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:28.650 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:28.650 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:28.651 DEBUG 4184 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:28.751 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:28.751 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:28.753 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:28.755 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:28.755 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:28.761 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:28.763 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:28.764 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:28.765 DEBUG 4184 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:36.640 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 16:00:36.640 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 16:00:36.641 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 16:00:36.641 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:36.641 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:36.643 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:36.728  INFO 4184 --- [http-nio-8080-exec-4] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-02 16:00:37.555 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:37.556 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:37.558 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:37.780 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:37.782 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:37.786 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:37.786 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:37.787 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:37.791 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:37.793 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:37.793 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:37.794 DEBUG 4184 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:37.843 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:37.843 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:37.846 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:37.847 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:37.848 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:37.851 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:37.852 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:37.853 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:37.853 DEBUG 4184 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:47.868 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-02 16:00:47.868 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-02 16:00:47.870 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-02 16:00:47.871 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:47.871 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:47.875 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:48.118 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-02 16:00:48.118 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-02 16:00:48.120 DEBUG 4184 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 25
+2020-04-02 16:00:48.437 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:48.438 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:48.439 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:48.440 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:48.440 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:48.445 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:48.447 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:48.447 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:48.448 DEBUG 4184 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-02 16:00:48.461 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-02 16:00:48.461 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-02 16:00:48.462 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-02 16:00:48.463 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-02 16:00:48.463 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-02 16:00:48.465 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-02 16:00:48.467 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-02 16:00:48.467 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-02 16:00:48.468 DEBUG 4184 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
