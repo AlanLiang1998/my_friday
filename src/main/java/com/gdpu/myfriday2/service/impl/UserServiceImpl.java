@@ -4,6 +4,7 @@ import com.gdpu.myfriday2.dao.RoleUserMapper;
 import com.gdpu.myfriday2.dao.UserMapper;
 import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.PageDto;
+import com.gdpu.myfriday2.dto.PassDto;
 import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.exception.EntityExistException;
 import com.gdpu.myfriday2.model.RoleUserExample;
@@ -14,6 +15,7 @@ import com.gdpu.myfriday2.service.UserService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -249,5 +251,18 @@ public class UserServiceImpl implements UserService {
         UserExample userExample = new UserExample();
         userExample.createCriteria().andUserIdIn(idList);
         return userMapper.deleteByExample(userExample);
+    }
+
+    @Override
+    public int changePassword(PassDto passDto) {
+        User user = userMapper.selectByPrimaryKey(passDto.getUserId());
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        if (!encoder.matches(passDto.getOldPass(), user.getPassword())) {
+            throw new RuntimeException("旧密码输入不正确");
+        }
+        User u = new User();
+        u.setUserId(user.getUserId());
+        u.setPassword(encoder.encode(passDto.getNewPass()));
+        return userMapper.updateByPrimaryKeySelective(u);
     }
 }

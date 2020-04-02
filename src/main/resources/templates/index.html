@@ -117,6 +117,10 @@
 <!-- 中部结束 -->
 </body>
 <script>
+    /***判断是否存在父级页面,存在则刷新,不存在则不刷新**/
+    if (self.location !== top.location) {
+        top.location = self.location;
+    }
     $(document).ready(function () {
         var nickname = localStorage.nickname;
         nickname = nickname != null && nickname != undefined ? nickname : '---';

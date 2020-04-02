@@ -23,6 +23,17 @@ import java.util.Objects;
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    /**
+     * 处理其它异常
+     */
+    @ExceptionHandler(value = RuntimeException.class)
+    public ResponseEntity<ApiError> runtimeException(RuntimeException e) {
+        // 打印堆栈信息
+        log.error(ThrowableUtil.getStackTrace(e));
+        return buildResponseEntity(ApiError.error(e.getMessage()));
+    }
+
     /**
      * 处理 EntityExist
      */

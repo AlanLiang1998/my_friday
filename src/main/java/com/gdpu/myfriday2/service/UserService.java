@@ -2,6 +2,7 @@ package com.gdpu.myfriday2.service;
 
 import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.PageDto;
+import com.gdpu.myfriday2.dto.PassDto;
 import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.model.User;
 
@@ -69,4 +70,12 @@ public interface UserService {
      * @return 删除结果
      */
     int deleteBatch(List<Long> idList);
+
+    /**
+     * 修改用户密码
+     *
+     * @param passDto 密码DTO
+     * @return 修改结果
+     */
+    int changePassword(PassDto passDto);
 }

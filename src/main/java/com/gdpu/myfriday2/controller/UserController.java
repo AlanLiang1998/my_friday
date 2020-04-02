@@ -2,6 +2,7 @@ package com.gdpu.myfriday2.controller;
 
 import com.gdpu.myfriday2.dto.KeywordDto;
 import com.gdpu.myfriday2.dto.PageDto;
+import com.gdpu.myfriday2.dto.PassDto;
 import com.gdpu.myfriday2.dto.UserDto;
 import com.gdpu.myfriday2.model.User;
 import com.gdpu.myfriday2.service.UserService;
@@ -10,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
@@ -70,7 +72,7 @@ public class UserController {
     @ResponseBody
     @PostMapping
     public ResponseResult<Object> create(@Validated(User.Create.class) UserDto userDto) {
-        userDto.setPassword("123456");
+        userDto.setPassword(new BCryptPasswordEncoder().encode("123456"));
         userDto.setCreateTime(new Date());
         userDto.setUpdateTime(userDto.getCreateTime());
         int result = userService.create(userDto);
@@ -163,5 +165,13 @@ public class UserController {
     public ResponseResult<Object> deleteBatch(@NotEmpty @RequestBody List<Long> idList) {
         int result = userService.deleteBatch(idList);
         return result == idList.size() ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    @PreAuthorize("hasAuthority('sys:user:edit')")
+    @ResponseBody
+    @PostMapping("/newPassword")
+    public ResponseResult<Object> changePassword(@Validated PassDto passDto) {
+        int result = userService.changePassword(passDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 }
