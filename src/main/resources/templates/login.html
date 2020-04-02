@@ -73,6 +73,7 @@
                             localStorage.setItem("userId", result.principal.userId);
                             localStorage.setItem("username", result.principal.username);
                             localStorage.setItem("nickname", result.principal.nickname);
+                            localStorage.setItem("user", JSON.stringify(result.principal));
                             var authorities = result.authorities;
                             var permission = [];
                             for (var i in authorities) {

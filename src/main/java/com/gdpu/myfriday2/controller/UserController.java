@@ -10,15 +10,20 @@ import com.gdpu.myfriday2.utils.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -172,6 +177,30 @@ public class UserController {
     @PostMapping("/newPassword")
     public ResponseResult<Object> changePassword(@Validated PassDto passDto) {
         int result = userService.changePassword(passDto);
+        return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<Object> getUser(@PathVariable("userId") Long userId) {
+        return new ResponseEntity<>(userService.queryById(userId), HttpStatus.OK);
+    }
+
+    /**
+     * 将日期格式的String类型转为Date类型
+     *
+     * @param binder 数据绑定
+     */
+    @InitBinder
+    public void dateBinder(WebDataBinder binder) {
+        String pattern = "yyyy-MM-dd";
+        CustomDateEditor editor = new CustomDateEditor(new SimpleDateFormat(pattern), true);
+        binder.registerCustomEditor(Date.class, editor);
+    }
+
+    @ResponseBody
+    @PostMapping("/info")
+    public ResponseResult<Object> updateInfo(@Validated(User.Update.class) UserDto userDto) {
+        int result = userService.update(userDto);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
     }
 }

@@ -206,25 +206,25 @@ public class UserServiceImpl implements UserService {
         //通过验证
         //首先修改用户
         int result1 = userMapper.updateByPrimaryKeySelective(userDto);
+        if (userDto.getRoleId() != null) {
+            //再添加用户角色关联
+            RoleUserKey roleUserKey = new RoleUserKey();
+            roleUserKey.setRoleId(userDto.getRoleId());
+            roleUserKey.setUserId(userDto.getUserId());
+            RoleUserExample roleUserExample = new RoleUserExample();
+            roleUserExample.createCriteria().andUserIdEqualTo(userDto.getUserId());
 
-        //再添加用户角色关联
-        RoleUserKey roleUserKey = new RoleUserKey();
-        roleUserKey.setRoleId(userDto.getRoleId());
-        roleUserKey.setUserId(userDto.getUserId());
-        RoleUserExample roleUserExample = new RoleUserExample();
-        roleUserExample.createCriteria().andUserIdEqualTo(userDto.getUserId());
-
-        int result2;
-        if (!CollectionUtils.isEmpty(roleUserMapper.selectByExample(roleUserExample))) {
-            //有记录则更新
-            result2 = roleUserMapper.updateByExampleSelective(roleUserKey, roleUserExample);
-        } else {
-            //没记录则插入
-            result2 = roleUserMapper.insert(roleUserKey);
-        }
-
-        if (result1 != 1 || result2 != 1) {
-            return 0;
+            int result2;
+            if (!CollectionUtils.isEmpty(roleUserMapper.selectByExample(roleUserExample))) {
+                //有记录则更新
+                result2 = roleUserMapper.updateByExampleSelective(roleUserKey, roleUserExample);
+            } else {
+                //没记录则插入
+                result2 = roleUserMapper.insert(roleUserKey);
+            }
+            if (result1 != 1 || result2 != 1) {
+                return 0;
+            }
         }
         return 1;
     }

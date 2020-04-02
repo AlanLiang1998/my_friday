@@ -15,6 +15,6 @@ import javax.validation.constraints.NotNull;
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class UserDto extends User {
-    @NotNull(message = "请为用户选择角色")
+    @NotNull(groups = {Create.class}, message = "请为用户选择角色")
     private Long roleId;
 }

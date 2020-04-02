@@ -29,7 +29,7 @@ public class User {
     private String phone;
 
     private String sex;
-
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date birthday;
     @NotNull(message = "请为用户选择状态", groups = {Create.class})
     private Byte status;
