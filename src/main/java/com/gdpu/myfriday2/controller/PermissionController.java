@@ -1,5 +1,6 @@
 package com.gdpu.myfriday2.controller;
 
+import com.alibaba.fastjson.JSONArray;
 import com.gdpu.myfriday2.model.Permission;
 import com.gdpu.myfriday2.service.PermissionService;
 import com.gdpu.myfriday2.utils.ResponseResult;
@@ -13,6 +14,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -127,5 +129,15 @@ public class PermissionController {
     public ResponseResult<Object> delete(@NotNull @RequestParam("id") Long id) {
         int result = permissionService.delete(id);
         return result == 1 ? ResponseResult.success() : ResponseResult.failure();
+    }
+
+    @PreAuthorize("hasAuthority('sys:menu:query')")
+    @GetMapping("/list/userId/{userId}")
+    @ResponseBody
+    public ResponseResult<Object> listByUserId(@PathVariable("userId") Long userId) {
+        JSONArray array = permissionService.listByUserId(userId);
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("permissions", array);
+        return ResponseResult.tableSuccess(data, 0L);
     }
 }

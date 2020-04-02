@@ -52,7 +52,7 @@
                     data: $("#login-form").serialize(),
                     success: function (result) {
                         if (result.authenticated == true) {
-                            localStorage.setItem("userId", result.principal.id);
+                            localStorage.setItem("userId", result.principal.userId);
                             localStorage.setItem("username", result.principal.username);
                             localStorage.setItem("nickname", result.principal.nickname);
                             var authorities = result.authorities;

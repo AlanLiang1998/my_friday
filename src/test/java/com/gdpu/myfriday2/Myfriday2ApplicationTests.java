@@ -13,7 +13,6 @@ import org.junit.jupiter.api.Test;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
-import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,7 +20,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.sql.DataSource;
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 
 @SpringBootTest
@@ -106,7 +104,7 @@ class Myfriday2ApplicationTests {
     void testPermissionTreeUtil() {
         List<Permission> permissions = permissionMapper.selectByExample(null);
         JSONArray array = new JSONArray();
-        PermissionTreeUtil.getPermissionTree(0, permissions, array);
+        PermissionTreeUtil.setPermissionTree(0, permissions, array);
         System.out.println(array);
     }
 

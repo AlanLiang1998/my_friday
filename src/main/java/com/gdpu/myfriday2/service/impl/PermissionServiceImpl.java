@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @Descriptin TODO
@@ -29,6 +30,15 @@ public class PermissionServiceImpl implements PermissionService {
     private PermissionMapper permissionMapper;
     @Autowired
     private RolePermissionMapper rolePermissionMapper;
+
+    @Override
+    public JSONArray listByUserId(Long userId) {
+        JSONArray array = new JSONArray();
+        List<Permission> permissions = permissionMapper.listByUserId(userId);
+        permissions = permissions.stream().filter(p -> p.getType().equals(1)).collect(Collectors.toList());
+        PermissionTreeUtil.setPermissionTree(0, permissions, array);
+        return array;
+    }
 
     @Override
     public int delete(Long id) {
@@ -76,7 +86,7 @@ public class PermissionServiceImpl implements PermissionService {
     public JSONArray list() {
         List<Permission> permissions = permissionMapper.selectByExample(null);
         JSONArray array = new JSONArray();
-        PermissionTreeUtil.getPermissionTree(0, permissions, array);
+        PermissionTreeUtil.setPermissionTree(0, permissions, array);
         return array;
     }
 }

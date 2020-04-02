@@ -65,4 +65,11 @@ public interface PermissionService {
      * @return 删除结果
      */
     int delete(Long id);
+
+    /**
+     * 查询指定用户的权限
+     * @param userId    用户ID
+     * @return  用户权限列表（JSONArray形式）
+     */
+    JSONArray listByUserId(Long userId);
 }
