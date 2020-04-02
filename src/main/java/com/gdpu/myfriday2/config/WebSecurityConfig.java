@@ -3,11 +3,11 @@ package com.gdpu.myfriday2.config;
 import com.gdpu.myfriday2.security.MyAccessDeniedHandler;
 import com.gdpu.myfriday2.security.MyAuthenticationFailureHandler;
 import com.gdpu.myfriday2.security.MyAuthenticationSuccessHandler;
+import com.gdpu.myfriday2.security.ValidateCodeFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,6 +16,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @Descriptin TODO
@@ -37,6 +38,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private MyAuthenticationFailureHandler myAuthenticationFailureHandler;
     @Autowired
     private MyAccessDeniedHandler myAccessDeniedHandler;
+    @Autowired
+    private ValidateCodeFilter validateCodeFilter;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -52,13 +55,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //开启登录配置
         http.authorizeRequests()
-                //放行访问登录页面和静态资源的请求
-                .antMatchers("/login.html", "/xadmin/**", "/tretable-lay/**", "/ztree/**", "/js/**", "/static/**").permitAll()
+                //放行访问登录页面、验证码和静态资源的请求
+                .antMatchers("/login.html", "/captcha", "/xadmin/**", "/tretable-lay/**", "/ztree/**", "/js/**", "/static/**").permitAll()
                 //其余请求在认证后可访问
                 .anyRequest().authenticated();
 
-        //允许表单登录
-        http.formLogin()
+        //添加图形验证码
+        http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+                //允许表单登录
+                .formLogin()
                 //自定义登录页面
                 .loginPage("/login.html")
                 //自定义登录表单提交路径

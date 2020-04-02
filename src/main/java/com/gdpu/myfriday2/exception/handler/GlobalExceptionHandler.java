@@ -2,6 +2,7 @@ package com.gdpu.myfriday2.exception.handler;
 
 import com.gdpu.myfriday2.exception.AssociationExistException;
 import com.gdpu.myfriday2.exception.EntityExistException;
+import com.gdpu.myfriday2.exception.ValidateCodeException;
 import com.gdpu.myfriday2.utils.ThrowableUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -33,6 +34,7 @@ public class GlobalExceptionHandler {
         log.error(ThrowableUtil.getStackTrace(e));
         return buildResponseEntity(ApiError.error(e.getMessage()));
     }
+    
 
     /**
      * 处理 EntityExist

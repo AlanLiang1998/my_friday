@@ -1,6 +1,7 @@
 package com.gdpu.myfriday2.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.gdpu.myfriday2.exception.ValidateCodeException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

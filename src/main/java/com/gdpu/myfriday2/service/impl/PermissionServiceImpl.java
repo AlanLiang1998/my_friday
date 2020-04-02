@@ -32,6 +32,7 @@ public class PermissionServiceImpl implements PermissionService {
     private RolePermissionMapper rolePermissionMapper;
 
     @Override
+    @Transactional(readOnly = true)
     public JSONArray listByUserId(Long userId) {
         JSONArray array = new JSONArray();
         List<Permission> permissions = permissionMapper.listByUserId(userId);

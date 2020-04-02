@@ -35,6 +35,15 @@
         <hr class="hr15">
         <input name="password" lay-verify="required" placeholder="密码" type="password" class="layui-input">
         <hr class="hr15">
+        <div class="layui-inline">
+            <div class="layui-input-inline">
+                <input name="verCode" lay-verify="required" placeholder="验证码" type="text">
+            </div>
+            <div class="layui-input-inline">
+                <img src="/captcha" width="130px" height="48px" th:src="@{/captcha}" id="verCodeImg"/>
+            </div>
+        </div>
+        <hr class="hr15">
         <input type="checkbox" name="remember-me" lay-skin="primary" title="记住我" checked>
         <hr class="hr15">
         <input value="登录" lay-submit lay-filter="login" style="width:100%;" type="submit">
@@ -47,6 +56,12 @@
     $(function () {
         layui.use('form', function () {
             var form = layui.form;
+
+            //刷新验证码
+            $('#verCodeImg').click(function flushVerCode() {
+                this.src = this.src + "?" + Math.random();
+            });
+
             //监听提交
             form.on('submit(login)', function (data) {
                 $.ajax({
@@ -68,7 +83,11 @@
                                 location.href = '/'
                             });
                         } else {
-                            layer.msg("登录异常，请联系管理员");
+                            if (result.message != undefined) {
+                                layer.msg(result.message);
+                            } else {
+                                layer.msg("登录异常，请联系管理员");
+                            }
                         }
                     },
                     error: function (xhr, textStatus, errorThrown) {
