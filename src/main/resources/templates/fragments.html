@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../static/xadmin/css/font.css" th:href="@{/xadmin/css/font.css}">
     <link rel="stylesheet" href="../static/xadmin/css/xadmin.css" th:href="@{/xadmin/css/xadmin.css}">
     <script type="text/javascript" src="../static/js/jquery.min.js" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" src="../static/js/permission.js" th:src="@{/js/permission.js}"></script>
     <script src="../static/xadmin/lib/layui/layui.js" charset="utf-8" th:src="@{/xadmin/lib/layui/layui.js}"></script>
     <script type="text/javascript" src="../static/xadmin/js/xadmin.js" th:src="@{/xadmin/js/xadmin.js}"></script>
     <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
@@ -19,8 +20,8 @@
     <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
-        // 是否开启刷新记忆tab功能
-        // var is_remember = false;
+        //是否开启刷新记忆tab功能
+        var is_remember = false;
     </script>
 </head>
 <body>

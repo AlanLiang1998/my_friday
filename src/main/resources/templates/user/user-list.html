@@ -40,14 +40,16 @@
             <div class="layui-card">
                 <!--操作栏-->
                 <script type="text/html" id="toolbar">
-                    <button class="layui-btn layui-btn-danger layui-btn-disabled" id="delAllBtn">
+                    <button class="layui-btn layui-btn-danger layui-btn-disabled" id="delAllBtn"
+                            permission="sys:user:del">
                         <i class="layui-icon"></i>批量删除
                     </button>
-                    <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',460,500)">
+                    <button class="layui-btn" onclick="xadmin.open('添加用户','/user/addPage',460,500)"
+                            permission="sys:user:add">
                         <i class="layui-icon"></i>添加
                     </button>
                     <!--搜索框-->
-                    <div class="layui-card-body layui-inline">
+                    <div class="layui-card-body layui-inline" permission="sys:user:query">
                         <form class="layui-form layui-col-space5" id="search-form">
                             <div class="layui-inline layui-show-xs-block">
                                 <input type="text" name="keyword" placeholder="请输入用户ID或用户名" autocomplete="off"
@@ -67,8 +69,10 @@
                     <table class="layui-table layui-form" id="user-table" lay-filter="user-table-filter">
                         <!--列工具栏-->
                         <script type="text/html" id="rowBar">
-                            <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit">编辑</a>
-                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                            <a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="edit"
+                               permission="sys:user:edit">编辑</a>
+                            <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"
+                               permission="sys:user:del">删除</a>
                         </script>
                     </table>
                 </div>
@@ -129,16 +133,31 @@
                     , {field: 'phone', title: '电话', width: 120}
                     , {field: 'email', title: '邮箱', width: 150}
                     , {
-                    field: 'status', title: '状态', width: 100, templet: function (data) {
+                    field: 'status',
+                    title: '状态',
+                    width: 100,
+                    hide: (!hasPermission('sys:user:edit')),
+                    templet: function (data) {
                         let isChecked = data.status == 1 ? "checked" : "";
                         return '<input type="checkbox" lay-skin="switch" lay-text="启用|禁用" lay-filter="status-filter"' + isChecked + '> ';
                     }
                 }
                     , {field: 'createTime', title: '创建日期', width: 150}
                     , {field: 'updateTime', title: '最后更新', width: 150}
-                    , {fixed: 'right', width: 140, align: 'center', toolbar: '#rowBar'}
+                    , {
+                    fixed: 'right',
+                    title: '操作',
+                    width: 140,
+                    align: 'center',
+                    toolbar: '#rowBar',
+                    hide: (!hasPermission('sys:user:edit') && !hasPermission('sys:user:del'))
+                }
                 ]
-            ]
+            ],
+            done: function () {
+                checkPermission();
+
+            }
         });
 
         //监听状态开关
@@ -266,16 +285,28 @@
                         , {field: 'phone', title: '电话', width: 120}
                         , {field: 'email', title: '邮箱', width: 150}
                         , {
-                        field: 'status', title: '状态', width: 100, templet: function (data) {
+                        field: 'status', title: '状态', width: 100,
+                        hide: (!hasPermission('sys:user:edit')),
+                        templet: function (data) {
                             let isChecked = data.status == 1 ? "checked" : "";
                             return '<input type="checkbox" lay-skin="switch" lay-text="启用|禁用" lay-filter="status-filter"' + isChecked + '> ';
                         }
                     }
                         , {field: 'createTime', title: '创建日期', width: 150}
                         , {field: 'updateTime', title: '最后更新', width: 150}
-                        , {fixed: 'right', width: 140, align: 'center', toolbar: '#rowBar'}
+                        , {
+                        fixed: 'right',
+                        title: '操作',
+                        width: 140,
+                        align: 'center',
+                        toolbar: '#rowBar',
+                        hide: (!hasPermission('sys:user:edit') && !hasPermission('sys:user:del'))
+                    }
                     ]
-                ]
+                ],
+                done: function () {
+                    checkPermission();
+                }
             });
 
             return false;

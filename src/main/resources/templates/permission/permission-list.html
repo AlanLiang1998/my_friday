@@ -26,12 +26,11 @@
         <div class="layui-row  layui-col-space15">
             <div class="layui-col-md12">
                 <div class="layui-card">
-
                     <div class="layui-card-header">
                         <form class="layui-form layui-col-md12 x-so" id="layuiFormPermission">
                             <a class="layui-btn" id="crollAll">折叠展开</a>
-                            <a class="layui-btn" onclick="xadmin.open('新增权限','/permission/addPage',500,500)"
-                               permission="sys:menu:add"><i class="layui-icon"></i>新增菜单</a>
+                            <a class="layui-btn" permission="sys:menu:add"
+                               onclick="xadmin.open('新增权限','/permission/addPage',500,500)"><i class="layui-icon"></i>新增菜单</a>
                         </form>
                     </div>
 
@@ -53,7 +52,6 @@
 </div>
 
 <script>
-
     var treetable, renderTable;
 
     layui.config({
@@ -87,12 +85,16 @@
                                 return d.type == '1' ? "菜单" : "按钮";
                             }
                         },
-                        {title: '操作', toolbar: '#barDemo'}
+                        {
+                            title: '操作',
+                            toolbar: '#barDemo',
+                            hide: (!hasPermission('sys:menu:edit') && !hasPermission('sys:menu:del'))
+                        }
                     ]
                 ],
-                // done: function () {
-                //     checkPermission();
-                // }
+                done: function () {
+                    checkPermission();
+                }
             });
         };
         renderTable();
@@ -139,8 +141,7 @@
             } else if (obj.event === 'edit') {
                 xadmin.open('编辑菜单信息', '/permission/editPage/?id=' + data.id, 500, 500);
             }
-        })
-        // checkPermission()
+        });
     });
 </script>
 </body>
