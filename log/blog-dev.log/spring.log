@@ -763,3 +763,542 @@
 2020-04-03 11:19:54.861 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
 2020-04-03 11:19:54.862 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
 2020-04-03 11:19:54.865 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:26:03.376 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:26:03.377 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:26:03.380 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:26:03.577 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:26:03.577 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:26:03.580 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:26:03.581 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:26:03.581 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:26:03.586 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:26:03.589 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:26:03.589 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:26:03.590 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:27:49.958 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:27:49.959 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:27:49.963 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:27:50.185 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:27:50.185 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:27:50.187 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:27:50.187 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:27:50.187 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:27:50.192 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:27:50.196 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:27:50.196 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:27:50.197 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:28:04.065 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:28:04.066 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:28:04.069 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:28:04.328 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:28:04.328 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:28:04.332 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:28:04.333 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:28:04.333 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:28:04.337 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:28:04.339 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:28:04.339 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:28:04.343 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:28:15.757 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:28:15.758 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:28:15.761 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:28:15.978 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:28:15.978 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:28:15.982 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:28:15.983 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:28:15.983 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:28:15.993 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:28:15.996 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:28:15.996 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:28:15.997 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:28:22.067 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:28:22.068 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: AlanLiang(String)
+2020-04-03 11:28:22.068 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 0
+2020-04-03 11:28:22.140  INFO 23952 --- [http-nio-8080-exec-4] c.g.m.s.MyAuthenticationFailureHandler   : 登录失败
+2020-04-03 11:28:34.326 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:28:34.326 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-03 11:28:34.327 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:28:34.327 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:28:34.327 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-03 11:28:34.329 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 20
+2020-04-03 11:28:34.398  INFO 23952 --- [http-nio-8080-exec-2] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:28:35.233 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:28:35.233 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-03 11:28:35.237 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 20
+2020-04-03 11:28:35.351 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:28:35.351 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:28:35.352 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:28:35.353 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:28:35.353 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:28:35.356 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:28:35.358 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:28:35.359 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:28:35.359 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:30:08.465 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:30:08.466 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:30:08.468 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:30:08.712 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:30:08.712 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:30:08.715 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:30:08.716 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:30:08.716 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:30:08.720 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:30:08.722 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:30:08.722 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:30:08.723 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:30:47.126 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:30:47.127 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:30:47.130 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 8
+2020-04-03 11:30:47.330 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:30:47.330 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:30:47.333 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:30:47.335 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:30:47.335 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:30:47.341 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:30:47.342 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:30:47.343 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:30:47.343 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:31:44.715 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:31:44.715 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: admin(String)
+2020-04-03 11:31:44.716 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:31:44.716 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:31:44.716 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-03 11:31:44.718 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 20
+2020-04-03 11:31:44.798  INFO 23952 --- [http-nio-8080-exec-5] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:31:45.568 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:31:45.569 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-03 11:31:45.574 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 20
+2020-04-03 11:31:45.705 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:31:45.705 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:31:45.707 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:31:45.707 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:31:45.707 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:31:45.710 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:31:45.711 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:31:45.711 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:31:45.712 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:31:48.172 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByPrimaryKey     : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id where u.user_id = ? 
+2020-04-03 11:31:48.174 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByPrimaryKey     : ==> Parameters: 1(Long)
+2020-04-03 11:31:48.176 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByPrimaryKey     : <==      Total: 1
+2020-04-03 11:32:03.610 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:32:03.610 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:32:03.611 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:32:03.612 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:32:03.613 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:32:03.614 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:32:05.119 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role where role_id = ? 
+2020-04-03 11:32:05.120 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2020-04-03 11:32:05.121 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByPrimaryKey  : <==      Total: 1
+2020-04-03 11:32:05.254 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:32:05.255 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:32:05.256 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:32:05.281 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.selectByExample                : ==>  Preparing: select role_id, permission_id from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:32:05.282 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.selectByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:32:05.283 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.selectByExample                : <==      Total: 8
+2020-04-03 11:32:17.169 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role WHERE ( role_name = ? ) 
+2020-04-03 11:32:17.170 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: Test(String)
+2020-04-03 11:32:17.171 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:32:17.172 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.updateByPrimaryKeySelective    : ==>  Preparing: update role SET role_name = ?, description = ?, update_time = ? where role_id = ? 
+2020-04-03 11:32:17.179 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.updateByPrimaryKeySelective    : ==> Parameters: Test(String), 测试人员(String), 2020-04-03 11:32:17.166(Timestamp), 3(Long)
+2020-04-03 11:32:17.183 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-03 11:32:17.183 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.deleteByExample                : ==>  Preparing: delete from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:32:17.184 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.deleteByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:32:17.187 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.deleteByExample                : <==    Updates: 8
+2020-04-03 11:32:17.187 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.insertBatch                    : ==>  Preparing: insert into role_permission( role_id, permission_id ) values (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) 
+2020-04-03 11:32:17.194 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.insertBatch                    : ==> Parameters: 3(Long), 1(Long), 3(Long), 2(Long), 3(Long), 3(Long), 3(Long), 4(Long), 3(Long), 7(Long), 3(Long), 8(Long), 3(Long), 9(Long), 3(Long), 10(Long), 3(Long), 12(Long), 3(Long), 13(Long), 3(Long), 14(Long)
+2020-04-03 11:32:17.196 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.insertBatch                    : <==    Updates: 11
+2020-04-03 11:32:18.507 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:32:18.508 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:32:18.508 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:32:18.510 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:32:18.510 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:32:18.511 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:32:26.182 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:32:26.183 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:32:26.187 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 11
+2020-04-03 11:32:26.355 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:32:26.355 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:32:26.356 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:32:26.357 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:32:26.357 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:32:26.361 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:32:26.363 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:32:26.363 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:32:26.364 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:32:37.812 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:32:37.812 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: test(String)
+2020-04-03 11:32:37.813 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:32:37.814 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:32:37.814 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:32:37.815 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 11
+2020-04-03 11:32:37.885  INFO 23952 --- [http-nio-8080-exec-2] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:32:38.743 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:32:38.743 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:32:38.744 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 11
+2020-04-03 11:32:38.898 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:32:38.898 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:32:38.900 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:32:38.900 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:32:38.900 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:32:38.903 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:32:38.904 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:32:38.905 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:32:38.906 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:32:42.649 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:32:42.649 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:32:42.651 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:32:44.257 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:32:44.258 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:32:44.258 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:32:44.260 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:32:44.260 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:32:44.261 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:33:48.211 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:33:48.211 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:33:48.213 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:33:48.213 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:33:48.214 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:33:48.216 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:33:48.218 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:33:48.218 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:33:48.219 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:33:52.909 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role where role_id = ? 
+2020-04-03 11:33:52.909 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2020-04-03 11:33:52.910 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByPrimaryKey  : <==      Total: 1
+2020-04-03 11:33:52.990 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:33:52.990 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:33:52.992 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:33:53.010 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.selectByExample                : ==>  Preparing: select role_id, permission_id from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:33:53.010 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.selectByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:33:53.013 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.R.selectByExample                : <==      Total: 11
+2020-04-03 11:33:59.427 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role WHERE ( role_name = ? ) 
+2020-04-03 11:33:59.427 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: Test(String)
+2020-04-03 11:33:59.428 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:33:59.429 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.updateByPrimaryKeySelective    : ==>  Preparing: update role SET role_name = ?, description = ?, update_time = ? where role_id = ? 
+2020-04-03 11:33:59.429 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.updateByPrimaryKeySelective    : ==> Parameters: Test(String), 测试人员(String), 2020-04-03 11:33:59.426(Timestamp), 3(Long)
+2020-04-03 11:33:59.430 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-03 11:33:59.430 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.deleteByExample                : ==>  Preparing: delete from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:33:59.430 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.deleteByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:33:59.431 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.deleteByExample                : <==    Updates: 11
+2020-04-03 11:33:59.432 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.insertBatch                    : ==>  Preparing: insert into role_permission( role_id, permission_id ) values (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) 
+2020-04-03 11:33:59.433 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.insertBatch                    : ==> Parameters: 3(Long), 1(Long), 3(Long), 2(Long), 3(Long), 3(Long), 3(Long), 4(Long), 3(Long), 5(Long), 3(Long), 7(Long), 3(Long), 8(Long), 3(Long), 9(Long), 3(Long), 10(Long), 3(Long), 11(Long), 3(Long), 12(Long), 3(Long), 13(Long), 3(Long), 14(Long), 3(Long), 15(Long)
+2020-04-03 11:33:59.449 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.insertBatch                    : <==    Updates: 14
+2020-04-03 11:34:00.540 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:34:00.541 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:34:00.542 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:34:00.543 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:34:00.544 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:34:00.545 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:34:14.863 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:34:14.864 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: test(String)
+2020-04-03 11:34:14.865 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:34:14.866 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:34:14.866 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:34:14.867 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 14
+2020-04-03 11:34:14.928  INFO 23952 --- [http-nio-8080-exec-4] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:34:15.811 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:34:15.811 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:34:15.813 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 14
+2020-04-03 11:34:15.985 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:34:15.985 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:34:15.987 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:34:15.988 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:34:15.988 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:34:15.990 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:34:15.992 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:34:15.992 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:34:15.993 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:34:28.165 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:34:28.165 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:34:28.166 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:34:28.166 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:34:28.166 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:34:28.169 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:34:28.172 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:34:28.172 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:34:28.172 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:34:29.830 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:34:29.830 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:34:29.832 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:34:31.153 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:34:31.153 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:34:31.154 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:34:31.155 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:34:31.156 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:34:31.156 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:35:02.896 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:35:02.897 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 1(Long)
+2020-04-03 11:35:02.900 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 20
+2020-04-03 11:35:03.002 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:35:03.003 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:35:03.006 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:35:03.006 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:35:03.007 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:35:03.009 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:35:03.010 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:35:03.010 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:35:03.010 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:35:07.797 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:35:07.797 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:35:07.800 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 14
+2020-04-03 11:35:07.946 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:35:07.946 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:35:07.947 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:35:07.948 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:35:07.948 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:35:07.949 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:35:07.952 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:35:07.952 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:35:07.954 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:35:12.125 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:35:12.125 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:35:12.126 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:35:12.127 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:35:12.127 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:35:12.127 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:35:13.868 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:35:13.868 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:35:13.870 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:35:17.605 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:35:17.606 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:35:17.607 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:35:17.608 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:35:17.608 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:35:17.610 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:35:17.611 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:35:17.611 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:35:17.612 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:36:04.510 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:36:04.511 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:36:04.514 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 14
+2020-04-03 11:36:04.687 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:36:04.687 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:36:04.690 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:36:04.692 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:36:04.692 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:36:04.695 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:36:04.696 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:36:04.696 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:36:04.697 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:36:23.556 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:36:23.556 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:36:23.557 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:36:23.558 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:36:23.558 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:36:23.559 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:36:24.497 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role where role_id = ? 
+2020-04-03 11:36:24.497 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2020-04-03 11:36:24.498 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByPrimaryKey  : <==      Total: 1
+2020-04-03 11:36:24.563 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:36:24.563 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:36:24.564 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:36:24.579 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.selectByExample                : ==>  Preparing: select role_id, permission_id from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:36:24.579 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.selectByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:36:24.580 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.selectByExample                : <==      Total: 14
+2020-04-03 11:36:37.924 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role WHERE ( role_name = ? ) 
+2020-04-03 11:36:37.924 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: Test(String)
+2020-04-03 11:36:37.925 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:36:37.925 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.updateByPrimaryKeySelective    : ==>  Preparing: update role SET role_name = ?, description = ?, update_time = ? where role_id = ? 
+2020-04-03 11:36:37.925 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.updateByPrimaryKeySelective    : ==> Parameters: Test(String), 测试人员(String), 2020-04-03 11:36:37.923(Timestamp), 3(Long)
+2020-04-03 11:36:37.928 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-03 11:36:37.928 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.deleteByExample                : ==>  Preparing: delete from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:36:37.928 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.deleteByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:36:37.928 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.deleteByExample                : <==    Updates: 14
+2020-04-03 11:36:37.929 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.insertBatch                    : ==>  Preparing: insert into role_permission( role_id, permission_id ) values (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) 
+2020-04-03 11:36:37.930 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.insertBatch                    : ==> Parameters: 3(Long), 1(Long), 3(Long), 2(Long), 3(Long), 3(Long), 3(Long), 4(Long), 3(Long), 5(Long), 3(Long), 25(Long), 3(Long), 6(Long), 3(Long), 7(Long), 3(Long), 8(Long), 3(Long), 9(Long), 3(Long), 10(Long), 3(Long), 11(Long), 3(Long), 23(Long), 3(Long), 12(Long), 3(Long), 13(Long), 3(Long), 14(Long), 3(Long), 15(Long), 3(Long), 24(Long)
+2020-04-03 11:36:37.931 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.R.insertBatch                    : <==    Updates: 18
+2020-04-03 11:36:38.983 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:36:38.983 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:36:38.983 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:36:38.985 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:36:38.985 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:36:38.985 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:36:53.976 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:36:53.976 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: test(String)
+2020-04-03 11:36:53.977 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:36:53.978 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:36:53.978 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:36:53.979 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 18
+2020-04-03 11:36:54.039  INFO 23952 --- [http-nio-8080-exec-3] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:36:54.895 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:36:54.896 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:36:54.898 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 18
+2020-04-03 11:36:55.062 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:36:55.062 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:36:55.064 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:36:55.064 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:36:55.064 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:36:55.066 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:36:55.067 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:36:55.068 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:36:55.068 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:37:05.967 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:37:05.968 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:37:05.969 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:37:05.969 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:37:05.969 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:37:05.971 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:37:05.972 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:37:05.972 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:37:05.973 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:37:07.948 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:37:07.948 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:37:07.949 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:37:10.948 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:37:10.948 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:37:10.948 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:37:10.950 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:37:10.950 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:37:10.950 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:38:12.411 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role where role_id = ? 
+2020-04-03 11:38:12.411 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2020-04-03 11:38:12.412 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByPrimaryKey  : <==      Total: 1
+2020-04-03 11:38:12.489 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:38:12.489 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:38:12.490 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:38:12.505 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.selectByExample                : ==>  Preparing: select role_id, permission_id from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:38:12.505 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.selectByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:38:12.505 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.selectByExample                : <==      Total: 18
+2020-04-03 11:38:37.248 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role WHERE ( role_name = ? ) 
+2020-04-03 11:38:37.248 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: Test(String)
+2020-04-03 11:38:37.249 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:38:37.249 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.updateByPrimaryKeySelective    : ==>  Preparing: update role SET role_name = ?, description = ?, update_time = ? where role_id = ? 
+2020-04-03 11:38:37.249 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.updateByPrimaryKeySelective    : ==> Parameters: Test(String), 测试人员(String), 2020-04-03 11:38:37.247(Timestamp), 3(Long)
+2020-04-03 11:38:37.250 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-03 11:38:37.251 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.deleteByExample                : ==>  Preparing: delete from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:38:37.251 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.deleteByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:38:37.253 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.deleteByExample                : <==    Updates: 18
+2020-04-03 11:38:37.253 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.insertBatch                    : ==>  Preparing: insert into role_permission( role_id, permission_id ) values (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) 
+2020-04-03 11:38:37.254 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.insertBatch                    : ==> Parameters: 3(Long), 1(Long), 3(Long), 2(Long), 3(Long), 3(Long), 3(Long), 25(Long), 3(Long), 6(Long), 3(Long), 7(Long), 3(Long), 8(Long), 3(Long), 9(Long), 3(Long), 12(Long), 3(Long), 13(Long), 3(Long), 19(Long), 3(Long), 20(Long)
+2020-04-03 11:38:37.255 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.d.R.insertBatch                    : <==    Updates: 12
+2020-04-03 11:38:38.203 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:38:38.204 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:38:38.204 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:38:38.206 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:38:38.206 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:38:38.206 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:38:51.013 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:38:51.013 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: test(String)
+2020-04-03 11:38:51.014 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:38:51.015 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:38:51.015 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:38:51.016 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 12
+2020-04-03 11:38:51.077  INFO 23952 --- [http-nio-8080-exec-10] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:38:51.922 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:38:51.922 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:38:51.924 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 12
+2020-04-03 11:38:52.070 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:38:52.070 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:38:52.072 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:38:52.072 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:38:52.072 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:38:52.074 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:38:52.076 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:38:52.076 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:38:52.077 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:38:57.709 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role where role_id = ? 
+2020-04-03 11:38:57.709 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.selectByPrimaryKey  : ==> Parameters: 3(Long)
+2020-04-03 11:38:57.710 DEBUG 23952 --- [http-nio-8080-exec-2] c.g.m.dao.RoleMapper.selectByPrimaryKey  : <==      Total: 1
+2020-04-03 11:38:57.783 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:38:57.784 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:38:57.785 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:38:57.798 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.selectByExample                : ==>  Preparing: select role_id, permission_id from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:38:57.798 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.selectByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:38:57.800 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.R.selectByExample                : <==      Total: 12
+2020-04-03 11:39:04.600 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role WHERE ( role_name = ? ) 
+2020-04-03 11:39:04.600 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: Test(String)
+2020-04-03 11:39:04.601 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:39:04.601 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.updateByPrimaryKeySelective    : ==>  Preparing: update role SET role_name = ?, description = ?, update_time = ? where role_id = ? 
+2020-04-03 11:39:04.602 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.updateByPrimaryKeySelective    : ==> Parameters: Test(String), 测试人员(String), 2020-04-03 11:39:04.599(Timestamp), 3(Long)
+2020-04-03 11:39:04.603 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-03 11:39:04.603 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.deleteByExample                : ==>  Preparing: delete from role_permission WHERE ( role_id = ? ) 
+2020-04-03 11:39:04.603 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.deleteByExample                : ==> Parameters: 3(Long)
+2020-04-03 11:39:04.604 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.deleteByExample                : <==    Updates: 12
+2020-04-03 11:39:04.604 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.insertBatch                    : ==>  Preparing: insert into role_permission( role_id, permission_id ) values (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) , (?, ?) 
+2020-04-03 11:39:04.605 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.insertBatch                    : ==> Parameters: 3(Long), 1(Long), 3(Long), 2(Long), 3(Long), 3(Long), 3(Long), 6(Long), 3(Long), 7(Long), 3(Long), 8(Long), 3(Long), 9(Long), 3(Long), 12(Long), 3(Long), 13(Long), 3(Long), 19(Long), 3(Long), 20(Long)
+2020-04-03 11:39:04.606 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.R.insertBatch                    : <==    Updates: 11
+2020-04-03 11:39:05.525 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:39:05.525 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:39:05.526 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:39:05.527 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:39:05.527 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:39:05.528 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:39:14.561 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( username = ? ) 
+2020-04-03 11:39:14.561 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: test(String)
+2020-04-03 11:39:14.562 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:39:14.563 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:39:14.563 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:39:14.564 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 11
+2020-04-03 11:39:14.638  INFO 23952 --- [http-nio-8080-exec-1] c.g.m.s.MyAuthenticationSuccessHandler   : 登录成功
+2020-04-03 11:39:15.484 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:39:15.484 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:39:15.486 DEBUG 23952 --- [http-nio-8080-exec-8] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 11
+2020-04-03 11:39:15.627 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:39:15.627 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:39:15.629 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:39:15.629 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:39:15.629 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:39:15.631 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:39:15.632 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:39:15.633 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:39:15.633 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:39:20.010 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:39:20.011 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:39:20.012 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:39:20.012 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:39:20.012 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:39:20.014 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:39:20.016 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:39:20.016 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:39:20.017 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:39:27.510 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByPrimaryKey     : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id where u.user_id = ? 
+2020-04-03 11:39:27.510 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByPrimaryKey     : ==> Parameters: 2(Long)
+2020-04-03 11:39:27.511 DEBUG 23952 --- [http-nio-8080-exec-7] c.g.m.d.U.selectWithRoleByPrimaryKey     : <==      Total: 1
+2020-04-03 11:39:46.091 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( phone = ? ) 
+2020-04-03 11:39:46.092 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: 18600009999(String)
+2020-04-03 11:39:46.092 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 0
+2020-04-03 11:39:46.093 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : ==>  Preparing: select user_id, username, password, nickname, avatar, email, phone, sex, birthday, status, create_time, update_time from user WHERE ( email = ? ) 
+2020-04-03 11:39:46.094 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : ==> Parameters: bf76b8@qq.com(String)
+2020-04-03 11:39:46.094 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.dao.UserMapper.selectByExample     : <==      Total: 1
+2020-04-03 11:39:46.096 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.U.updateByPrimaryKeySelective    : ==>  Preparing: update user SET username = ?, nickname = ?, email = ?, phone = ?, sex = ?, birthday = ? where user_id = ? 
+2020-04-03 11:39:46.097 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.U.updateByPrimaryKeySelective    : ==> Parameters: test(String), 测试用户(String), bf76b8@qq.com(String), 18600009999(String), M(String), 2020-03-08(Date), 2(Long)
+2020-04-03 11:39:46.098 DEBUG 23952 --- [http-nio-8080-exec-9] c.g.m.d.U.updateByPrimaryKeySelective    : <==    Updates: 1
+2020-04-03 11:39:47.306 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.PermissionMapper.listByUserId  : ==>  Preparing: select p.permission_id, p.parent_id, p.permission_name, p.css, p.href, p.type, p.permission, p.sort from role_user ru inner join role_permission rp on ru.role_id=rp.role_id left join permission p on rp.permission_id=p.permission_id where ru.user_id = ? 
+2020-04-03 11:39:47.307 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.PermissionMapper.listByUserId  : ==> Parameters: 2(Long)
+2020-04-03 11:39:47.308 DEBUG 23952 --- [http-nio-8080-exec-10] c.g.m.dao.PermissionMapper.listByUserId  : <==      Total: 11
+2020-04-03 11:39:47.473 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:39:47.474 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:39:47.475 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:39:47.476 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:39:47.476 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 10(Integer)
+2020-04-03 11:39:47.478 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 10
+2020-04-03 11:39:47.479 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:39:47.479 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:39:47.480 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1
+2020-04-03 11:39:49.170 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByPrimaryKey     : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id where u.user_id = ? 
+2020-04-03 11:39:49.171 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByPrimaryKey     : ==> Parameters: 2(Long)
+2020-04-03 11:39:49.172 DEBUG 23952 --- [http-nio-8080-exec-4] c.g.m.d.U.selectWithRoleByPrimaryKey     : <==      Total: 1
+2020-04-03 11:39:54.578 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:39:54.578 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:39:54.579 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:40:01.243 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==>  Preparing: select count(*) from role 
+2020-04-03 11:40:01.244 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:40:01.244 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.countByExample      : <==      Total: 1
+2020-04-03 11:40:01.245 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==>  Preparing: select role_id, role_name, description, create_time, update_time from role 
+2020-04-03 11:40:01.245 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : ==> Parameters: 
+2020-04-03 11:40:01.246 DEBUG 23952 --- [http-nio-8080-exec-3] c.g.m.dao.RoleMapper.selectByExample     : <==      Total: 3
+2020-04-03 11:41:32.371 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:41:32.371 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:41:32.373 DEBUG 23952 --- [http-nio-8080-exec-6] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:42:00.345 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==>  Preparing: select permission_id, parent_id, permission_name, css, href, type, permission, sort from permission 
+2020-04-03 11:42:00.345 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : ==> Parameters: 
+2020-04-03 11:42:00.346 DEBUG 23952 --- [http-nio-8080-exec-1] c.g.m.d.P.selectByExample                : <==      Total: 25
+2020-04-03 11:42:57.974 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==>  Preparing: SELECT count(0) FROM user u INNER JOIN role_user ru ON u.user_id = ru.user_id INNER JOIN role r ON r.role_id = ru.role_id 
+2020-04-03 11:42:57.974 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : ==> Parameters: 
+2020-04-03 11:42:57.977 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample_COUNT  : <==      Total: 1
+2020-04-03 11:42:57.977 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==>  Preparing: select u.user_id, u.username, u.password, u.nickname, u.avatar, u.email, u.phone, u.sex, u.birthday, u.status, u.create_time, u.update_time, r.role_id, r.role_name from user u inner join role_user ru on u.user_id = ru.user_id inner join role r on r.role_id = ru.role_id order by user_id LIMIT ? 
+2020-04-03 11:42:57.977 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : ==> Parameters: 100(Integer)
+2020-04-03 11:42:57.983 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.d.U.selectWithRoleByExample        : <==      Total: 91
+2020-04-03 11:42:57.986 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==>  Preparing: select count(*) from user 
+2020-04-03 11:42:57.986 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : ==> Parameters: 
+2020-04-03 11:42:57.986 DEBUG 23952 --- [http-nio-8080-exec-5] c.g.m.dao.UserMapper.countByExample      : <==      Total: 1

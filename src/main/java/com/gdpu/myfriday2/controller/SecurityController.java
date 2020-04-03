@@ -26,6 +26,11 @@ public class SecurityController {
         return "error/403";
     }
 
+    @GetMapping(value = "/400.html")
+    public String noPage() {
+        return "error/400";
+    }
+
     /**
      * 图形验证码
      */
